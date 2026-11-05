@@ -1260,6 +1260,58 @@ h2 .w:hover>span{color:var(--ind)}
 @media(min-width:701px){.grid.grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}}
 @media(prefers-reduced-motion:reduce){.ow-req{animation:none}}
 </style>
+<style id="polish-v1">
+/* ===== polish v1: phone + desktop fit, calm floating buttons, steady scrolling ===== */
+:root{--safe-b:env(safe-area-inset-bottom,0px)}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+html:has(body.at-end){scroll-behavior:auto}
+main,main>section,.site-footer,.hero,.cta,.cta-band{max-width:100%;overflow-x:clip}
+img,video,canvas,iframe{max-width:100%}
+h1,h2,h3,h4,p,li{overflow-wrap:break-word}
+.btn,button,summary,a.btn,.mbar{touch-action:manipulation}
+/* clean and clear: no blur layers, header stays put */
+*,*::before,*::after{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+.blob,.hero::after{filter:none!important}
+.site-header,.site-header.hide{transform:none!important}
+/* sections that are off screen stop animating (battery + smoothness) */
+.off *,.off *::before,.off *::after{animation-play-state:paused!important}
+/* near the bottom of the page: no scroll-linked movement, so nothing can shake */
+body.at-end .rv,body.at-end .rv.in,body.at-end .px-pre{opacity:1!important;transform:none!important;translate:none!important;transition:none!important}
+body.at-end .blob,body.at-end .orbit,body.at-end .hero-bg{will-change:auto!important}
+/* floating buttons */
+.wa-float{transition:translate .35s cubic-bezier(.65,0,.2,1),scale .35s cubic-bezier(.65,0,.2,1),opacity .3s,bottom .4s cubic-bezier(.65,0,.2,1),transform .3s}
+.wa-float.fab-hide{translate:0 34px;scale:.8;opacity:0;pointer-events:none}
+@media(max-width:900px){
+ .totop{display:none!important}
+ .wa-float{width:46px;height:46px;right:14px;bottom:calc(14px + var(--safe-b))}
+ .wa-float svg{width:24px;height:24px}
+ body.bar-on .wa-float{bottom:calc(76px + var(--safe-b))}
+ .site-footer{padding-bottom:calc(88px + var(--safe-b))}
+}
+/* hero pills: all three visible on a phone (wrap instead of side-swipe) */
+@media(max-width:700px){
+ .hero .checklist{flex-wrap:wrap!important;overflow:visible!important;margin-inline:0!important;padding:0!important;gap:8px!important}
+ .hero .checklist li{white-space:normal}
+}
+/* readable small labels on phones (nothing under 11.5px) */
+@media(max-width:700px){
+ .eyebrow,.fchip,.ob-tag,.cm,.hwp-lab,.marq span,.ticker span{font-size:12px!important}
+ .chip,.ib,.eng-cat{font-size:11.5px!important}
+}
+@media(max-width:700px){.sgrid{margin-top:22px}}
+/* comfortable touch targets */
+@media(pointer:coarse){
+ .site-logo{min-height:44px}
+ .fgrid li{margin-bottom:2px}
+ .fgrid li a,.fbot a{display:inline-flex;align-items:center;min-height:40px}
+ .ob-link,.cta-band a:not(.btn),.cta a:not(.btn){display:inline-flex;align-items:center;min-height:40px}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+ html{scroll-behavior:auto!important}
+ .rv,.px-pre{opacity:1!important;transform:none!important;translate:none!important}
+}
+</style>
 </head>
 <body>
 
@@ -2563,13 +2615,17 @@ img.img-in{animation:imgIn .8s var(--ease) both}
    {n:'Priyadarshana K',r:'Google review',g:1,t:'Had an excellent experience with Algo Orbit Innovations. The team is professional, responsive, and genuinely knowledgeable in their field. Communication was smooth throughout, and the quality of work exceeded my expectations. Highly recommend them to anyone looking for a reliable and skilled partner.'},
    {n:'Matthew Wilson',r:'Google review',g:1,h:1,t:'Really happy with the work AlgoOrbit did for us. We worked with the team on a custom business management system, and the whole process was smooth from start to finish. Everyone was responsive, easy to communicate with, and handled changes quickly.<br><br>Mr. Nishan was great to work with personally. Very approachable, professional, and knowledgeable. The whole team did a great job, and we really appreciated their support throughout the project. We\u2019d definitely recommend AlgoOrbit and would love to work with them again on future projects.'},
    {n:'Dhrithi Rai B',r:'Google review',g:1,t:'My experience with the Flutter project was very useful and interesting. I learned to create attractive user interfaces, use Dart and Flutter widgets, connect Firebase, and fix errors during development. It improved my coding, debugging, and problem-solving skills.'},
-   {n:'Riya Fernandes',r:'Owner, Brew & Bean Caf\u00e9',i:'https://www.algoorbit.in/static/images/review/riya.png',t:'ALGO ORBIT completely transformed how we run our caf\u00e9. The management system they built handles orders, staff scheduling, and payments seamlessly. The team was professional, fast, and genuinely cared about our success.'},
-   {n:'Dr. Meera Rao',r:'Harmony Health Clinic',i:'https://www.algoorbit.in/static/images/review/meera.png',t:'The clinic management system ALGO ORBIT delivered was clean, practical, and exceeded every expectation. Patient scheduling, records, and billing, all in one intuitive system. Our staff adopted it in days.'},
-   {n:'Prajna Mendon',r:'NMAMIT Nitte',i:'https://www.algoorbit.in/static/images/review/prajna.jpg',t:'The training program at ALGO ORBIT didn\u2019t just teach me to code; it taught me to think like a developer. Real projects, real mentors, real feedback. I landed my first job offer before the program even ended.'}
+   {n:'Riya Fernandes',k:'Client',r:'Owner, Brew & Bean Caf\u00e9',i:'https://www.algoorbit.in/static/images/review/riya.png',t:'ALGO ORBIT completely transformed how we run our caf\u00e9. The management system they built handles orders, staff scheduling, and payments seamlessly. The team was professional, fast, and genuinely cared about our success.'},
+   {n:'Dr. Meera Rao',k:'Client',r:'Harmony Health Clinic',i:'https://www.algoorbit.in/static/images/review/meera.png',t:'The clinic management system ALGO ORBIT delivered was clean, practical, and exceeded every expectation. Patient scheduling, records, and billing, all in one intuitive system. Our staff adopted it in days.'},
+   {n:'Prajna Mendon',k:'Student',r:'NMAMIT Nitte',i:'https://www.algoorbit.in/static/images/review/prajna.jpg',t:'The training program at ALGO ORBIT didn\u2019t just teach me to code; it taught me to think like a developer. Real projects, real mentors, real feedback. I landed my first job offer before the program even ended.'}
   ]);
+  var gG='<svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="#4285F4" d="M22.5 12.3c0-.8-.1-1.5-.2-2.2H12v4.2h5.9a5 5 0 0 1-2.2 3.3v2.7h3.5c2.1-1.9 3.3-4.7 3.3-8z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.5-2.7c-1 .7-2.2 1-3.8 1-2.9 0-5.4-2-6.3-4.6H2.1v2.8A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.7 13.9a6.6 6.6 0 0 1 0-4.2V6.9H2.1a11 11 0 0 0 0 10z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3.1.6 4.2 1.7l3.1-3.1A11 11 0 0 0 2.1 6.9l3.6 2.8C6.6 7.3 9.1 5.4 12 5.4z"/></svg>';
+  var qs='<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M9.3 5C5.8 6.5 3.5 9.6 3.5 13.6V19h6.200v-6H6.600c.1-2.200 1.200-3.800 3.300-4.800zm9 0c-3.500 1.500-5.800 4.600-5.800 8.600V19h6.200v-6h-3.100c.1-2.200 1.200-3.800 3.300-4.800z"/></svg>';
+  var star='<span style="--i:0">&#9733;</span><span style="--i:1">&#9733;</span><span style="--i:2">&#9733;</span><span style="--i:3">&#9733;</span><span style="--i:4">&#9733;</span>';
   var one=V.map(function(v){
    var av=v.i?'<img class="av" src="'+v.i+'" alt="" width="46" height="46" loading="lazy">':'<span class="av ini" aria-hidden="true">'+esc(v.ini||v.n.charAt(0))+'</span>';
-   return '<figure class="rv-c'+(v.g?' g':'')+'"><div class="who">'+av+'<span><strong>'+esc(v.n)+'</strong><small>'+esc(v.r)+'</small></span></div><p>\u201C'+(v.h?v.t:esc(v.t))+'\u201D</p><div class="rf"><div class="rs" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>'+(v.x?'<span class="rtag">'+esc(v.x)+'</span>':'')+'</div></figure>'}).join('');
+   var body=v.h?v.t:esc(v.t);
+   return '<figure class="rv-c'+(v.g?' g':'')+(v.t.length>320?' long':'')+'"><span class="rv-bar" aria-hidden="true"></span><div class="rv-top"><span class="rv-q">'+qs+'</span><span class="rv-src">'+(v.g?gG:'<i class="rv-dot"></i>')+esc(v.g?'Google':(v.k||'Team'))+'</span></div><div class="rs" aria-label="5 out of 5 stars">'+star+'</div><p>'+body+'</p>'+(v.x?'<span class="rtag">'+esc(v.x)+'</span>':'')+'<div class="who">'+av+'<span><strong>'+esc(v.n)+'</strong><small>'+esc(v.g?'Posted on Google':v.r)+'</small></span><span class="rv-ok" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.500 4.500L19 7.500"/></svg></span></div></figure>'}).join('');
   var rn=Math.max(2,Math.ceil(innerWidth*2/(V.length*330)));
   t.innerHTML=one.repeat(rn*2);
   Q('figure',t).forEach(function(f,i){if(i>=V.length)f.setAttribute('aria-hidden','true')});
@@ -3026,5 +3082,199 @@ section.section.tv-sec::after{translate:0 calc(var(--pp,0)*-50px)}
 @media(max-width:780px){#applyModal #apLeft{display:none}#applyModal #apRight{padding:32px 20px 28px}}
 @media(max-width:700px){#applyModal .av-inp{font-size:16px}}
 </style>
+<script id="polish-v1-js">
+(function(){
+ var R=matchMedia('(prefers-reduced-motion:reduce)').matches,b=document.body;
+ var Q=function(s){return Array.prototype.slice.call(document.querySelectorAll(s))};
+ /* 1. pause infinite animations in sections that are not on screen */
+ if('IntersectionObserver' in window){
+  var po=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle('off',!e.isIntersecting)})},{rootMargin:'120px 0px'});
+  Q('main>section,.hero,.cta,.cta-band,.site-footer').forEach(function(s){po.observe(s)});
+ }
+ /* 2. flag the last stretch of the page so scroll-linked effects stand still there */
+ var on=false,t=false;
+ function chk(){t=false;var rem=document.documentElement.scrollHeight-(scrollY+innerHeight),n=on?rem<innerHeight*1.5:rem<innerHeight*1.2;
+  if(n!==on){on=n;b.classList.toggle('at-end',n)}}
+ addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(chk)}},{passive:true});
+ addEventListener('resize',chk);addEventListener('load',chk);chk();
+ /* 3. WhatsApp button tucks away while reading downwards on a phone, returns on scroll up */
+ var w=document.querySelector('.wa-float');
+ if(w&&!R){var mq=matchMedia('(max-width:900px)'),last=scrollY,ft,tk=false;
+  addEventListener('scroll',function(){if(tk)return;tk=true;requestAnimationFrame(function(){tk=false;var y=scrollY,d=y-last;
+   if(mq.matches){if(d>6&&y>200)w.classList.add('fab-hide');else if(d<-6)w.classList.remove('fab-hide');
+    clearTimeout(ft);ft=setTimeout(function(){w.classList.remove('fab-hide')},900)}else w.classList.remove('fab-hide');
+   last=y})},{passive:true});
+ }
+ /* 4. touch wording */
+ if(matchMedia('(hover:none)').matches){
+  Q('.head p').forEach(function(p){if(/^Hover\b/.test(p.textContent))p.textContent=p.textContent.replace(/^Hover/,'Tap')});
+ }
+})();
+</script>
+<style id="feedback-cards">
+/* ===== Feedback cards: same premium cards + drag/swipe marquee as the home page ===== */
+.mq-on .rv-track{animation:none!important;transform:translate3d(0,0,0);will-change:transform}
+.mq-view{cursor:grab;touch-action:pan-y;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;outline:none}
+.mq-view.drag{cursor:grabbing}
+.mq-view img{-webkit-user-drag:none;user-drag:none;pointer-events:none}
+.mq-view:focus-visible{outline:2px solid var(--ind);outline-offset:-2px;border-radius:14px}
+.rv-mq{contain:paint}
+.rv-mq{padding:26px 0 18px}
+.rv-track{gap:24px;align-items:stretch}
+.rv-c{width:clamp(300px,31vw,420px);padding:0;gap:0;overflow:hidden;border:0;border-radius:26px;
+ background:linear-gradient(165deg,#fff 0%,#f4f2ff 100%);
+ box-shadow:0 0 0 1px rgba(169,163,238,.55),0 30px 50px -28px rgba(0,0,0,.75),0 0 40px -12px rgba(143,132,242,.5);
+ transition:transform .55s var(--ease),box-shadow .55s var(--ease)}
+.rv-c::before{content:"\201C";position:absolute;right:16px;top:auto;bottom:-34px;left:auto;font:700 170px/1 Georgia,serif;color:rgba(91,75,232,.07);pointer-events:none;z-index:0;transition:transform .7s var(--ease),color .4s}
+.rv-c::after{opacity:0}
+.rv-c>*{position:relative;z-index:1}
+.rv-bar{position:absolute!important;left:0;right:0;top:0;height:5px;z-index:3!important;background:linear-gradient(90deg,#5b4be8,#82c8eb,#a9a3ee,#5b4be8);background-size:300% 100%;animation:rvBar 6s linear infinite}
+@keyframes rvBar{to{background-position:300% 0}}
+.rv-top{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:28px 26px 0}
+.rv-q{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,var(--ind),var(--peri));box-shadow:0 12px 22px -10px rgba(91,75,232,.8);transition:transform .5s cubic-bezier(.34,1.56,.64,1)}
+.rv-src{display:inline-flex;align-items:center;gap:7px;padding:6px 12px 6px 10px;border-radius:99px;background:#fff;border:1px solid rgba(91,75,232,.2);font:600 12px/1 var(--fd);color:var(--navy);box-shadow:0 6px 14px -10px rgba(20,21,46,.5)}
+.rv-dot{width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,var(--ind),#82c8eb);box-shadow:0 0 0 3px rgba(91,75,232,.15)}
+.rv-c .rs{padding:16px 26px 0;letter-spacing:0;font-size:17px;line-height:1;text-shadow:none;display:flex;gap:3px}
+.rv-c .rs span{display:inline-block;background:linear-gradient(180deg,#ffd45c,#f0a91c);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 2px 4px rgba(240,169,28,.4));animation:starTw 3.6s ease-in-out infinite;animation-delay:calc(var(--i)*.14s)}
+@keyframes starTw{0%,70%,100%{transform:translateY(0) scale(1)}80%{transform:translateY(-3px) scale(1.25)}90%{transform:translateY(0) scale(1)}}
+.rv-c p{padding:14px 26px 22px;font-size:15px;line-height:1.75;color:#34365a;flex:1}
+.rv-c .who{padding:16px 26px 22px;border-top:1px dashed rgba(91,75,232,.28);background:linear-gradient(180deg,rgba(236,235,252,.0),rgba(236,235,252,.75));gap:13px}
+.rv-c .who>span:nth-child(2){flex:1;min-width:0}
+.rv-c strong{font-size:15.5px;transition:color .3s}.rv-c small{display:block;margin-top:3px;font-size:12.5px}
+.rv-c .av{width:48px;height:48px;border-radius:50%;box-shadow:0 0 0 2px #fff,0 0 0 4px var(--peri),0 10px 18px -8px rgba(91,75,232,.6);transition:box-shadow .4s,transform .5s cubic-bezier(.34,1.56,.64,1)}
+.rv-c .av.ini{width:48px;height:48px}
+.rv-ok{flex:none;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,#22c55e,#16a34a);box-shadow:0 6px 14px -6px rgba(22,163,74,.8)}
+@media(hover:hover){
+ .rv-c:hover{transform:translateY(-12px);box-shadow:0 0 0 2px rgba(91,75,232,.75),0 0 56px 0 rgba(143,132,242,.75),0 40px 60px -26px rgba(0,0,0,.85)}
+ .rv-c:hover .rv-q{transform:rotate(-10deg) scale(1.12)}
+ .rv-c:hover::before{transform:translate(-10px,-12px) scale(1.08);color:rgba(91,75,232,.13)}
+ .rv-c:hover .av{transform:scale(1.07)}
+ .rv-c:hover .rv-bar{animation-duration:2s}
+}
+.rv-c.pr{transform:scale(.985)}
+@media(max-width:700px){
+ .rv-c{width:min(84vw,330px);border-radius:22px}
+ .rv-top{padding:22px 20px 0}.rv-c .rs{padding:14px 20px 0;font-size:16px}
+ .rv-c p{padding:12px 20px 18px;font-size:14.5px;line-height:1.7}
+ .rv-c .who{padding:14px 20px 18px}
+ .rv-q{width:40px;height:40px;border-radius:12px}
+ .rv-track{gap:16px}
+ .rv-c .rtag{margin-left:20px!important}
+}
+@media(max-width:380px){.rv-c{width:86vw}.rv-src{font-size:11px;padding:5px 10px 5px 8px}}
+@media(prefers-reduced-motion:reduce){.rv-bar,.rv-c .rs span{animation:none!important}}
+.rv-c.long p{font-size:13px;line-height:1.6}
+@media(max-width:700px){.rv-c.long p{font-size:12.5px;line-height:1.55}}
+.rv-c>.spot{display:none!important}
+.rv-c .rtag{margin:0 26px 18px;align-self:flex-start}
+</style>
+<script id="feedback-cards-js">
+(function(){
+var R=matchMedia('(prefers-reduced-motion:reduce)').matches;
+var Q=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+var ICON={p:'<svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>',n:'<svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>'};
+function makeMarquee(view,track,cardSel,speedFn,label){
+ if(!view||!track)return;
+ var cards=function(){return Q(cardSel,track)};
+ var x=0,half=0,vel=0,drag=false,id=null,sx=0,sy=0,lx=0,lt=0,moved=0,resume=0,last=0,visible=true,suppress=false,decided=false,horizontal=false;
+ if(R){return} /* reduced motion: leave the native scroller alone */
+ view.classList.add('mq-view');view.parentNode.classList.add('mq-on');
+ view.setAttribute('tabindex','0');view.setAttribute('role','group');view.setAttribute('aria-roledescription','carousel');view.setAttribute('aria-label',label);
+
+ /* make sure each half is wider than the viewport so the loop never shows a gap */
+ function fill(){
+  var c=cards();if(!c.length)return;
+  var orig=c.filter(function(e){return e.getAttribute('data-mq')!=='c'&&!e.hasAttribute('aria-hidden')});
+  if(!orig.length)orig=c.slice(0,Math.max(1,c.length/2));
+  var n=c.length,sets=Math.max(2,Math.round(n/orig.length));
+  if(c.length<=orig.length||!c[orig.length])return;
+  var one=(c[orig.length].offsetLeft-c[0].offsetLeft)||1;
+  var need=Math.ceil((innerWidth*1.4)/one);need=Math.max(1,need);
+  var want=need*2;
+  while(sets<want||sets%2){orig.forEach(function(o){var d=o.cloneNode(true);d.setAttribute('aria-hidden','true');d.setAttribute('data-mq','c');Q('img',d).forEach(function(i){i.alt='';i.setAttribute('draggable','false')});track.appendChild(d)});sets++}
+ }
+ function measure(){var c=cards();if(c.length<2){half=0;return}half=c[c.length/2].offsetLeft-c[0].offsetLeft}
+ function wrap(){if(!half)return;x=x%half;if(x>0)x-=half}
+ var prog=null;
+ function paint(){wrap();track.style.transform='translate3d('+x.toFixed(2)+'px,0,0)';
+  if(prog&&half){var p=(-x/half);prog.style.transform='translateX('+(p*(prog.parentNode.clientWidth-prog.offsetWidth)/1).toFixed(1)+'px)'}}
+ function tick(t){
+  requestAnimationFrame(tick);
+  var dt=Math.min(.05,(t-(last||t))/1000);last=t;if(!visible||!half)return;
+  if(!drag){
+   if(Math.abs(vel)>6){x+=vel*dt;vel*=Math.pow(.04,dt)}
+   else{vel=0;if(t>resume)x-=speedFn()*dt}
+  }
+  paint();
+ }
+ /* pointer drag (mouse, pen and touch). Vertical page scroll still works because of touch-action:pan-y */
+ view.addEventListener('pointerdown',function(e){
+  if(e.pointerType==='mouse'&&e.button!==0)return;
+  drag=true;decided=false;horizontal=false;moved=0;id=e.pointerId;sx=lx=e.clientX;sy=e.clientY;lt=performance.now();vel=0;
+ });
+ view.addEventListener('pointermove',function(e){
+  if(!drag||e.pointerId!==id)return;
+  var dx=e.clientX-lx,now=performance.now(),dt=Math.max(1,now-lt)/1000;
+  if(!decided){
+   var ax=Math.abs(e.clientX-sx),ay=Math.abs(e.clientY-sy);
+   if(ax>5||ay>5){decided=true;horizontal=ax>=ay;
+    if(horizontal){try{view.setPointerCapture(id)}catch(_){}view.classList.add('drag')}}
+   if(!horizontal)return;
+  }
+  if(!horizontal)return;
+  x+=dx;moved+=Math.abs(dx);
+  vel=vel*.6+(dx/dt)*.4;
+  lx=e.clientX;lt=now;paint();
+ });
+ function end(e){
+  if(!drag||(e&&e.pointerId!==id))return;
+  drag=false;view.classList.remove('drag');
+  if(performance.now()-lt>90)vel=0;           /* finger rested before release: no fling */
+  vel=Math.max(-2600,Math.min(2600,vel));
+  resume=performance.now()+1400;
+  if(moved>6){suppress=true;setTimeout(function(){suppress=false},60)}
+  try{view.releasePointerCapture(id)}catch(_){}
+ }
+ view.addEventListener('pointerup',end);view.addEventListener('pointercancel',end);
+ view.addEventListener('click',function(e){if(suppress){e.preventDefault();e.stopPropagation()}},true);
+ view.addEventListener('dragstart',function(e){e.preventDefault()});
+ /* trackpad / shift+wheel sideways */
+ view.addEventListener('wheel',function(e){
+  if(Math.abs(e.deltaX)>Math.abs(e.deltaY)&&Math.abs(e.deltaX)>0){e.preventDefault();x-=e.deltaX;vel=0;resume=performance.now()+1400;paint()}
+ },{passive:false});
+ /* keyboard */
+ function glide(dist){vel=dist*3.22;resume=performance.now()+1400}
+ function step(){var c=cards()[0];return c?c.getBoundingClientRect().width+(parseFloat(getComputedStyle(c).marginRight)||0)+(parseFloat(getComputedStyle(track).columnGap)||0):320}
+ view.addEventListener('keydown',function(e){
+  if(e.key==='ArrowRight'){glide(-step());e.preventDefault()}
+  else if(e.key==='ArrowLeft'){glide(step());e.preventDefault()}
+ });
+ /* controls */
+ var ctl=document.createElement('div');ctl.className='mq-ctl';
+ var bp=document.createElement('button'),bn=document.createElement('button');
+ bp.type=bn.type='button';bp.className='mq-btn p';bn.className='mq-btn n';
+ bp.setAttribute('aria-label','Previous');bn.setAttribute('aria-label','Next');bp.innerHTML=ICON.p;bn.innerHTML=ICON.n;
+ var mid=document.createElement('span');mid.className='mq-hint';mid.textContent='Drag or swipe';
+ var pr=document.createElement('span');pr.className='mq-prog';pr.setAttribute('aria-hidden','true');prog=document.createElement('i');pr.appendChild(prog);
+ var stack=document.createElement('div');stack.style.cssText='display:flex;flex-direction:column;align-items:center;gap:10px';stack.appendChild(mid);stack.appendChild(pr);
+ ctl.appendChild(bp);ctl.appendChild(stack);ctl.appendChild(bn);
+ 
+ prog=null;
+ /* only animate while on screen */
+ if('IntersectionObserver' in window){new IntersectionObserver(function(es){visible=es[0].isIntersecting;last=0},{rootMargin:'200px 0px'}).observe(view)}
+ function init(){fill();measure();paint()}
+ init();addEventListener('load',init);
+ var rt;addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(init,120)});
+ requestAnimationFrame(tick);
+}
+
+
+function boot(){
+ makeMarquee(document.querySelector('.rv-mq'),document.getElementById('rvTrack'),'.rv-c',function(){return innerWidth<700?18:14},'Client, team and learner reviews');
+ Q('.rv-c').forEach(function(c){c.addEventListener('pointerdown',function(){c.classList.add('pr')});['pointerup','pointercancel','pointerleave'].forEach(function(t){c.addEventListener(t,function(){c.classList.remove('pr')})})});
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){requestAnimationFrame(boot)});else requestAnimationFrame(boot);
+})();
+</script>
 </body>
 </html>
