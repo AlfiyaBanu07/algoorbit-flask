@@ -1,5 +1,5 @@
 
-from flask import Flask, render_template, abort
+from flask import Flask, render_template, abort, redirect
 
 app = Flask(__name__)
 
@@ -10,6 +10,7 @@ app.jinja_env.comment_end_string = '--}'
 
 # Homepage
 @app.route('/')
+@app.route('/home')
 def home():
     return render_template('index.html')
 
@@ -19,21 +20,28 @@ def home():
 def pages(page):
 
     allowed_pages = [
-        'index.html',
-        'about.html',
-        'careers.html',
-        'consultancy.html',
-        'contact.html',
-        'our-work.html',
-        'products.html',
-        'training.html',
-        'training-corporate.html',
-        'training-institution.html',
-        'training-learner.html'
+        'about',
+        'careers',
+        'consultancy',
+        'contact',
+        'our-work',
+        'products',
+        'training',
+        'training-corporate',
+        'training-institution',
+        'training-learner'
     ]
 
     if page in allowed_pages:
-        return render_template(page)
+        return render_template(f'{page}.html')
+
+    # Redirect old .html URLs to clean URLs
+    if page.endswith('.html'):
+        clean_page = page[:-5]
+        if clean_page in allowed_pages:
+            return redirect(f'/{clean_page}', code=301)
+        if clean_page == 'index':
+            return redirect('/home', code=301)
 
     abort(404)
 
@@ -43,24 +51,28 @@ def pages(page):
 def works(page):
 
     allowed_works = [
-        'vrtx.html',
-        'luminae.html',
-        'bramhari.html',
-        'hopeforward.html',
-        'swiftcart.html',
-        'gym.html',
-        'novabuild.html',
-        'voyex.html',
-        'hospital.html',
-        'annapoorna.html'
+        'vrtx',
+        'luminae',
+        'bramhari',
+        'hopeforward',
+        'swiftcart',
+        'gym',
+        'novabuild',
+        'voyex',
+        'hospital',
+        'annapoorna'
     ]
 
     if page in allowed_works:
-        return render_template(f'works/{page}')
+        return render_template(f'works/{page}.html')
+
+    if page.endswith('.html'):
+        clean_page = page[:-5]
+        if clean_page in allowed_works:
+            return redirect(f'/works/{clean_page}', code=301)
 
     abort(404)
 
 
-# Run Flask application
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
