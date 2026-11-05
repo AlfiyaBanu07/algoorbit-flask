@@ -721,5 +721,44 @@ if(!reduce&&window.Lenis){
  addEventListener('scroll',kick,{passive:true});addEventListener('resize',kick);addEventListener('load',kick);kick();
 })();
 </script>
+<style id="tl-index-smooth">
+/* =====================================================================
+   INDEX.HTML SMOOTH PARITY (additive, added last; no content or logic removed)
+   Rim-light spotlight on cards (cursor on desktop, tap on touch), smoother
+   shared easing, press feel on touch, soft image fade-in.
+   ===================================================================== */
+:root{--e3:cubic-bezier(.22,1,.36,1)}
+.tile,.faq details,.flow li{position:relative}
+.spot{position:absolute!important;inset:0;z-index:4!important;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .4s ease;background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgba(143,132,242,.14),transparent 62%)}
+.spot::after{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.5px;background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),rgb(91,75,232),rgba(130,200,235,.75) 45%,transparent 75%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask-composite:exclude}
+*:hover>.spot,.spot-on>.spot{opacity:1}
+.card,.tile,.flow li,.faq details{transition-timing-function:var(--e3)}
+@media(hover:none){.card:active,.tile:active,.faq summary:active{transform:scale(.985);transition:transform .15s}}
+img.img-ld{opacity:0}
+img.img-in{animation:tlImgIn .8s var(--e3) both}
+@keyframes tlImgIn{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){.spot{display:none}img.img-in{animation:none}}
+</style>
+<script id="tl-index-smooth-js">
+(function(){
+ var R=matchMedia('(prefers-reduced-motion:reduce)').matches,Q=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+ if(R)return;
+ /* 1. rim-light spotlight: follows the cursor, or glows where you tap on touch */
+ var SEL='.card,.tile,.faq details';
+ Q(SEL).forEach(function(c){if(c.querySelector(':scope>.spot'))return;var i=document.createElement('i');i.className='spot';i.setAttribute('aria-hidden','true');c.appendChild(i)});
+ var raf=0,tx=null,ex=0,ey=0;
+ document.addEventListener('pointermove',function(e){if(e.pointerType==='touch')return;var c=e.target.closest&&e.target.closest(SEL);if(!c)return;tx=c;ex=e.clientX;ey=e.clientY;
+  if(!raf)raf=requestAnimationFrame(function(){raf=0;var r=tx.getBoundingClientRect();tx.style.setProperty('--mx',(ex-r.left)+'px');tx.style.setProperty('--my',(ey-r.top)+'px')})},{passive:true});
+ document.addEventListener('pointerdown',function(e){if(e.pointerType!=='touch')return;var c=e.target.closest&&e.target.closest(SEL);if(!c)return;var r=c.getBoundingClientRect();
+  c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px');c.classList.add('spot-on');clearTimeout(c._so);c._so=setTimeout(function(){c.classList.remove('spot-on')},1600)},{passive:true});
+ /* 2. images fade in once loaded (hero and already-loaded images are left alone) */
+ Q('img').forEach(function(im){
+  if(im.complete||im.closest('.hero'))return;
+  im.classList.add('img-ld');
+  var d=function(){im.classList.remove('img-ld');im.classList.add('img-in')};
+  im.addEventListener('load',d,{once:true});im.addEventListener('error',function(){im.classList.remove('img-ld')},{once:true});
+  setTimeout(function(){im.classList.remove('img-ld')},4000)});
+})();
+</script>
 </body>
 </html>

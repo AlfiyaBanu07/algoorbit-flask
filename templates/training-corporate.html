@@ -6,7 +6,8 @@
 <title>Corporate &amp; Industry Training | Algo Orbit</title>
 <meta name="description" content="Customised corporate and industry training programs by Algo Orbit: AI &amp; ML, Full Stack, Data Science, Cloud &amp; DevOps, Cybersecurity and emerging technologies for freshers and experienced professionals.">
 <meta name="theme-color" content="#5b4be8">
-<link rel="icon" href="static/assets/images/favicon.svg" type="image/svg+xml" sizes="any">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%230e0f2a'/%3E%3Cline x1='13.5' y1='28' x2='21.5' y2='12.5' stroke='%23fff' stroke-width='10' stroke-linecap='round'/%3E%3Ccircle cx='30' cy='27.5' r='5' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="alternate icon" href="static/assets/images/favicon.svg" type="image/svg+xml">
 <link rel="alternate icon" href="static/assets/images/nl.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -2842,5 +2843,51 @@ html{scroll-behavior:smooth}
 @media(max-width:480px){.site-header .nav-back{padding:3px 12px 3px 3px;font-size:12.5px;gap:8px}.site-header .nav-back .bl-ic{width:26px;height:26px}}
 @media(max-width:340px){.site-header .nav-back>span:last-child{display:none}.site-header .nav-back{padding:3px}}
 </style>
+<style id="tc-index-smooth">
+/* =====================================================================
+   INDEX.HTML SMOOTH PARITY (additive, added last; no content or logic removed)
+   1) Cursor spotlight on cards (desktop) / tap glow (touch)
+   2) One shared ease-out curve for card + button hovers, press feel on touch
+   3) Section glows drift softly with scroll
+   ===================================================================== */
+:root{--e3:cubic-bezier(.22,1,.36,1)}
+.card,.tl-card{position:relative}
+.spot{position:absolute!important;inset:0;z-index:4!important;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .4s ease;background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgba(143,132,242,.16),transparent 62%)}
+.spot::after{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.5px;background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),rgb(91,75,232),rgba(130,200,235,.75) 45%,transparent 75%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask-composite:exclude}
+*:hover>.spot,.spot-on>.spot{opacity:1}
+.card,.tl-card{transition:transform .55s var(--e3),box-shadow .55s var(--e3),border-color .4s ease,background .4s ease}
+.btn{transition:transform .35s var(--e3),box-shadow .35s var(--e3),background .3s,color .3s,border-color .3s}
+@media(hover:hover) and (pointer:fine){.btn:hover{transform:translateY(-2px)}}
+@media(hover:none){.card:active,.tl-card:active,.btn:active{transform:scale(.985);transition:transform .15s}}
+.hero,#approach,.cta-band{--bp:0}
+@property --bp{syntax:'<number>';inherits:false;initial-value:0}
+.hero::before,.cta-band::before,#approach::before{translate:0 calc(var(--bp,0)*40px)}
+.hero::after,.cta-band::after,#approach::after{translate:0 calc(var(--bp,0)*-34px)}
+@media(prefers-reduced-motion:reduce){.spot{display:none}.hero::before,.hero::after,.cta-band::before,.cta-band::after,#approach::before,#approach::after{translate:none}}
+</style>
+<script id="tc-index-smooth-js">
+(function(){
+ var R=matchMedia('(prefers-reduced-motion:reduce)').matches,Q=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+ var clamp=function(v,a,b){return Math.max(a,Math.min(b,v))};
+ if(R)return;
+ /* 1. spotlight layer follows the cursor; on touch it glows where you tap */
+ var SEL='.card,.tl-card';
+ Q(SEL).forEach(function(c){if(c.querySelector(':scope>.spot'))return;var i=document.createElement('i');i.className='spot';i.setAttribute('aria-hidden','true');c.appendChild(i)});
+ var raf=0,tx=null,ex=0,ey=0;
+ document.addEventListener('pointermove',function(e){if(e.pointerType==='touch')return;var c=e.target.closest&&e.target.closest(SEL);if(!c)return;tx=c;ex=e.clientX;ey=e.clientY;
+  if(!raf)raf=requestAnimationFrame(function(){raf=0;var r=tx.getBoundingClientRect();tx.style.setProperty('--mx',(ex-r.left)+'px');tx.style.setProperty('--my',(ey-r.top)+'px')})},{passive:true});
+ document.addEventListener('pointerdown',function(e){if(e.pointerType!=='touch')return;var c=e.target.closest&&e.target.closest(SEL);if(!c)return;var r=c.getBoundingClientRect();
+  c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px');c.classList.add('spot-on');clearTimeout(c._so);c._so=setTimeout(function(){c.classList.remove('spot-on')},1600)},{passive:true});
+ /* 2. section glows drift softly with scroll (eased, compositor friendly) */
+ var T=Q('.hero,#approach,.cta-band').map(function(el){return{el:el,v:0}}),run=false;
+ function frame(){run=false;var vh=innerHeight,moving=false;
+  T.forEach(function(o){var r=o.el.getBoundingClientRect();if(r.bottom<-300||r.top>vh+300)return;
+   var tg=clamp((r.top+r.height/2-vh/2)/(vh/2+r.height/2),-1,1);o.v+=(tg-o.v)*.12;
+   if(Math.abs(tg-o.v)>.002)moving=true;else o.v=tg;o.el.style.setProperty('--bp',o.v.toFixed(3))});
+  if(moving)kick()}
+ function kick(){if(!run){run=true;requestAnimationFrame(frame)}}
+ addEventListener('scroll',kick,{passive:true});addEventListener('resize',kick);addEventListener('load',kick);kick();
+})();
+</script>
 </body>
 </html>

@@ -1338,13 +1338,6 @@ html #corp.g3>.c.c.c:not(.q):is(:hover,.tch) .wn{
 <div class="c" data-href="#colleges"><div class="cimg"><img src="static/assets/images/colleges.png" alt="College programs" loading="lazy"><span>Colleges</span></div><div class="ai"><span class="ic">03</span><h3>For Colleges</h3><p>Faculty Development Programs, a full DSA plus development Placement Readiness curriculum, and technology workshops delivered directly on your campus.</p><a class="btn rm" href="training-institution.html"><span>Read more about institutions</span></a></div></div>
 </div></div></section>
 
-<section class="sec dk" id="corporate"><div class="wrap">
-<div class="head"><span class="tag">Section 01 · For Enterprises</span><h2>Enterprise training engineered for business outcomes</h2><p class="lead">From cloud migration to AI adoption, Algo Orbit designs corporate training around the tools your teams actually use in production. Every program is benchmarked against role specific competency frameworks and tied to measurable performance indicators, not just attendance.</p></div>
-<div class="head" style="margin-bottom:28px"><h3 style="font-size:1.4rem">Six practice areas. Every tool your teams will actually use.</h3><p class="lead" style="font-size:.95rem">Technology &amp; tools covered</p></div>
-<div class="g3" id="corp"></div>
-<div class="center"><a href="contact.html" class="btn l">Request Training Proposal</a></div>
-</div></section>
-
 <section class="sec alt"><div class="wrap sp">
 <div>
 <span class="tag">Delivery Models</span><h2>Flexible training delivery built around your team</h2>
@@ -1354,12 +1347,8 @@ html #corp.g3>.c.c.c:not(.q):is(:hover,.tch) .wn{
 <div class="pic"><img src="https://www.algoorbit.in/static/images/background/corp3.png" alt="Corporate training delivery" loading="lazy"><div class="fl"><strong>3 Options</strong>Delivery modes</div></div>
 </div></section>
 
-<section class="sec" id="students"><div class="wrap">
-<div class="head"><span class="tag">Section 02 · For Students</span><h2>Bootcamps that get you interview ready</h2><p class="lead">Structured, mentor led bootcamps covering the exact stacks companies hire for right now. Live projects, code reviews and placement support are built into every track, not offered as an afterthought.</p></div>
-<div class="head" style="margin-bottom:28px"><h3 style="font-size:1.4rem">Six tracks. One goal: get you hired.</h3></div>
-<div class="g3" id="boot"></div>
-<div class="center"><a href="https://forms.gle/YDS9jowNYgyRRNEw7" target="_blank" rel="noopener" class="btn">Enroll in a Bootcamp</a></div>
-<div class="head" style="margin-top:72px"><span class="tag">Certification Programs</span><h2>Certifications employers recognize and verify</h2><p class="lead">Short, focused certification tracks for learners who want to validate a specific skill quickly, each backed by a QR verified Algo Orbit certificate.</p></div>
+<section class="sec" id="certifications"><div class="wrap">
+<div class="head"><span class="tag">Certification Programs</span><h2>Certifications employers recognize and verify</h2><p class="lead">Short, focused certification tracks for learners who want to validate a specific skill quickly, each backed by a QR verified Algo Orbit certificate.</p></div>
 <div class="g3" id="cert"></div>
 </div></section>
 
@@ -1381,12 +1370,6 @@ html #corp.g3>.c.c.c:not(.q):is(:hover,.tch) .wn{
 <li><div><strong>Or enter the ID</strong><span>Type the Certificate ID into the registry above and press Verify.</span></div></li>
 <li><div><strong>See verified details</strong><span>Learner, program, institution and date appear in seconds.</span></div></li>
 </ol>
-</div></section>
-
-<section class="sec" id="colleges"><div class="wrap">
-<div class="head"><span class="tag">Section 03 · For Colleges &amp; Institutions</span><h2>Partnering with campuses to build placement ready engineers</h2><p class="lead">We work directly with training and placement cells and academic departments to strengthen curriculum, upskill faculty, and get final year students placement ready well before campus drives begin.</p></div>
-<div class="head" style="margin-bottom:28px"><h3 style="font-size:1.4rem">Faculty Development Programs: keep faculty ahead of the technology curve</h3></div>
-<div class="g3" id="fdp"></div>
 </div></section>
 
 <section class="sec alt"><div class="wrap">
@@ -1456,34 +1439,13 @@ IM=function(i,l,alt){return'<div class="cimg"><img src="'+U(POOL[i%POOL.length])
 var TK=['Cloud & DevOps','Full Stack','Data & AI/ML','Cybersecurity','Flutter','MERN','Frontend','DSA & Placements','Faculty Development','Campus Workshops','QR Verified Certificates'];
 if($('tk'))$('tk').innerHTML=TK.concat(TK).map(function(t){return'<span>'+t.replace(/&/g,'&amp;')+'</span>'}).join('');
 
-R('corp',[
-['Cloud & DevOps Engineering','Build and automate cloud native infrastructure at enterprise scale, from provisioning to continuous deployment.','AWS,Azure,GCP,Docker,Kubernetes,Terraform,Jenkins,GitLab CI/CD,Ansible,Prometheus & Grafana','12 to 16 weeks','Advanced','CD'],
-['Full Stack & Application Engineering','End to end web development from modern JavaScript frameworks to scalable backend APIs and database design.','React,Next.js,Angular,Node.js,Express,Django,Spring Boot,TypeScript,GraphQL,PostgreSQL,MongoDB,Redis','14 to 18 weeks','Intermediate','FS'],
-['Data, Analytics & AI/ML','Full ML lifecycle from data engineering and feature design to model deployment and applied generative AI.','Python,Pandas,NumPy,SQL,Apache Spark,Airflow,TensorFlow,PyTorch,Scikit learn,Power BI,Tableau,LangChain & Prompt Engineering','16 to 20 weeks','Advanced','AI'],
-['Cybersecurity & Compliance','From penetration testing to defensive SOC operations, governance and regulatory readiness for audits.','Kali Linux,Burp Suite,Nmap,Wireshark,SIEM Tools,ISO 27001,GDPR,NIST,SOC 2,Threat Modeling','10 to 14 weeks','Advanced','CS'],
-['Product, Agile & Delivery Excellence','Discovery, validation, roadmapping and stakeholder alignment drawn from real product case studies.','Jira,Confluence,Scrum,Kanban,OKRs,Design Thinking,Stakeholder Management,Roadmapping','8 to 12 weeks','Intermediate','PM'],
-['Low Code, ERP & Enterprise Systems','Business process automation and enterprise systems training for teams running on established platforms.','SAP Fundamentals,Salesforce,Power Platform,ServiceNow Basics,Business Process Automation','6 to 10 weeks','All Levels','ES']
-],function(x,i){return'<div class="c">'+IM(i,x[4],x[0])+'<span class="ic">'+x[5]+'</span><h3>'+x[0]+'</h3><p>'+x[1]+'</p><div class="tgs">'+T(x[2])+'</div><div class="ft"><span>'+x[3]+'</span><span class="bd">'+x[4]+'</span></div></div>'});
-
 R('deliv',[['On Site Corporate Training','Our instructors come to you for deep, immersive in person sessions built around your team\'s environment, tools, and day to day challenges.','ON'],['Virtual Instructor Led Training','Live, high engagement online sessions with real instructors. Breakout rooms, hands on labs, and real time collaboration for distributed teams.','VR'],['Hybrid Learning Solutions','Blend live instruction with self paced modules. Ideal for enterprises with geographically distributed teams.','HY']],ST(0));
-
-R('boot',[
-['1551650975-87deedd944c3','FLUTTER','Flutter App Development','One codebase, two stores. Ship to Google Play and the App Store using Flutter and Dart, the most in demand cross platform skill in the market right now.','Dart and Flutter from ground up~State management and Firebase~Animations, payments and auth~Play Store and App Store deployment','6 to 8 weeks','Flutter / Dart',1],
-['1593720213428-28a5b9e94613','MERN','MERN Full Stack Development','Master the complete JavaScript stack: MongoDB, Express, React and Node.js. Build and deploy full scale web applications exactly how top tier startups operate.','React.js and modern JavaScript~Node.js, Express and REST APIs~MongoDB and database design~Cloud deployment and DevOps basics','8 weeks','MERN Stack'],
-['1461749280684-dccba630e2f6','FRONTEND','Frontend Development','Build fast, accessible, pixel perfect interfaces with modern JavaScript, React, Next.js and Tailwind. Design systems, performance and real deployment included.','HTML, CSS, JavaScript (ES6+)~React, Next.js and component design~Tailwind CSS and responsive UI~API integration and deployment','6 to 8 weeks','React / Next.js'],
-['1516321318423-f06f85e504b3','CORE CS','Software Engineering Fundamentals','The core computer science every strong engineer needs: data structures, OOP, databases, system design basics and clean coding practices.','Data structures and algorithms~OOP, design patterns and clean code~DBMS, SQL and version control with Git~Introductory system design concepts','8 weeks','Beginner to Intermediate'],
-['1521737604893-d14cc237f11d','PLACEMENTS','Placement Readiness Program','Everything between "I can code" and "I got the offer": aptitude, DSA problem drills, mock interviews, resume building and group discussion practice.','Aptitude and logical reasoning~DSA problem solving drills~Mock technical and HR interviews~Resume, LinkedIn and GD practice','4 to 6 weeks','All Levels'],
-['1550439062-609e1531270e','CP','Competitive Programming','Sharpen problem solving speed and accuracy in C++ or Java, built for coding rounds, Codeforces and LeetCode style contests.','Time and space complexity mastery~Graphs, DP, greedy and trees~Weekly timed contests with ranking~Company specific coding round prep','6 weeks','Intermediate']
-],function(x){return'<div class="c"><div class="cimg"><img src="'+U(x[0])+'" alt="'+x[2]+'" loading="lazy"><span>'+x[1]+'</span>'+(x[7]?'<b class="pop">Most Popular · Android + iOS</b>':'')+'</div><h3>'+x[2]+'</h3><p>'+x[3]+'</p><ul>'+L(x[4])+'</ul><div class="ft"><span>'+x[5]+'</span><span class="bd">'+x[6]+'</span></div></div>'});
 
 R('cert',[['Certified Flutter Developer','Cross platform mobile development, state management and app store deployment.','FL','1551650975-87deedd944c3'],['Certified MERN Stack Developer','End to end JavaScript stack proficiency validated through a deployed capstone project.','MN','1593720213428-28a5b9e94613'],['Certified Frontend Engineer','React, responsive design and modern UI engineering, assessed on a live build.','FE','1461749280684-dccba630e2f6'],['Certified DSA Professional','Data structures, algorithms and complexity analysis validated across timed assessments.','DS','1516321318423-f06f85e504b3'],['Certified Software Engineer','Core engineering practices spanning OOP, databases and system design fundamentals.','SE','1555529669-e69e7aa0ba9a'],['Certified Competitive Programmer','Contest grade problem solving performance across ranked assessments.','CP','1550439062-609e1531270e']],function(x){return'<div class="c"><div class="cimg"><img src="'+U(x[3])+'" alt="'+x[0]+'" loading="lazy"></div><span class="ic">'+x[2]+'</span><h3>'+x[0]+'</h3><p>'+x[1]+'</p></div>'});
 
 R('vfe',[['QR Code on Every Certificate','Each certificate carries a unique QR code that employers and TPOs scan to instantly verify learner details, project, and completion date.','QR'],['Project Details Included','Certificates include the specific project or workshop completed, so employers see exactly what was built, not just "completed training".','PD'],['Registered Company Credibility','Algo Orbit is a registered private limited company (CIN: U62011KA2025PTC207904). Every certificate carries legal company weight.','RC'],['LinkedIn Shareable Format','Designed for LinkedIn profiles with verification links recruiters click directly from your profile.','LI']],function(x){var ic={QR:'i-qr',PD:'i-doc',RC:'i-shield',LI:'i-share'}[x[2]]||'i-check';return'<div class="c"><span class="ic"><svg class="ui" aria-hidden="true"><use href="#'+ic+'"/></svg></span><h3>'+x[0]+'</h3><p>'+x[1]+'</p></div>'});
 
-R('fdp',[['AI & Machine Learning FDP','A hands on faculty program covering Python, ML fundamentals, deep learning and how to bring applied AI into classroom projects.','AI'],['Full Stack Web Development FDP','Modern web fundamentals, from HTML and JavaScript to MERN, so faculty can mentor project based coursework confidently.','FS'],['Cloud Computing & DevOps FDP','AWS and Azure fundamentals, containers and CI/CD concepts, adapted for classroom delivery and lab exercises.','CD'],['Cybersecurity FDP','Network security, ethical hacking basics and secure coding practices, structured for both theory and lab sessions.','CS'],['IoT & Embedded Systems FDP','Sensor integration, microcontrollers and edge connectivity concepts, built around practical mini project kits.','IO'],['Data Science & Analytics FDP','Statistics, Python analytics libraries and visualization tools, framed around teachable, reusable classroom datasets.','DA']],function(x,i){return'<div class="c">'+IM(i+3,'FDP',x[0])+'<span class="ic">'+x[2]+'</span><h3>'+x[0]+'</h3><p>'+x[1]+'</p></div>'});
-
-
-R('ws',[['Python for Problem Solving','Core syntax, data structures and problem solving patterns for first and second year students.','Variables, loops and functions~Lists, dictionaries and file handling~Mini automation project','1 day','Beginner'],['Java & OOP Workshop','Object oriented concepts and Java fundamentals mapped directly to common university syllabi.','Classes, objects and inheritance~Collections and exception handling~Small console application build','2 days','Beginner'],['Web Development Workshop','HTML, CSS and JavaScript fundamentals, ending with a deployed personal portfolio site.','Semantic HTML and CSS layouts~JavaScript DOM manipulation~Live portfolio deployment','2 days','Beginner'],['Cloud Computing Workshop','AWS and Azure fundamentals: compute, storage and deployment basics for aspiring cloud engineers.','Core cloud service concepts~Hands on EC2 and storage labs~Deploy a sample application','2 days','Intermediate'],['AI & Prompt Engineering Workshop','Practical applied AI: using LLMs, prompt design and building a simple AI powered mini tool.','LLM fundamentals and use cases~Prompt engineering techniques~Build a small AI powered tool','1 day','All Levels'],['Cybersecurity Awareness Workshop','Practical security hygiene, common attack patterns and safe coding habits for student developers.','Common vulnerabilities and attacks~Safe coding and password hygiene~Live vulnerability demo','1 day','Beginner']],function(x,i){return'<div class="c">'+IMW(i,'Workshop',x[0])+'<h3>'+x[0]+'</h3><p>'+x[1]+'</p><ul>'+L(x[2])+'</ul><div class="ft"><span>'+x[3]+'</span><span class="bd">'+x[4]+'</span></div></div>'});
+R('ws',[['Python for Problem Solving','Core syntax, data structures and problem solving patterns for first and second year students.','Variables, loops and functions~Lists, dictionaries and file handling~Mini automation project','1 day','Beginner'],['Java & OOP Workshop','Object oriented concepts and Java fundamentals mapped directly to common university syllabi.','Classes, objects and inheritance~Collections and exception handling~Small console application build','2 days','Beginner'],['Web Development Workshop','HTML, CSS and JavaScript fundamentals, ending with a deployed personal portfolio site.','Semantic HTML and CSS layouts~JavaScript DOM manipulation~Live portfolio deployment','2 days','Beginner'],['AI & Prompt Engineering Workshop','Practical applied AI: using LLMs, prompt design and building a simple AI powered mini tool.','LLM fundamentals and use cases~Prompt engineering techniques~Build a small AI powered tool','1 day','All Levels']],function(x,i){return'<div class="c">'+IMW([0,1,2,4][i],'Workshop',x[0])+'<h3>'+x[0]+'</h3><p>'+x[1]+'</p><ul>'+L(x[2])+'</ul><div class="ft"><span>'+x[3]+'</span><span class="bd">'+x[4]+'</span></div></div>'});
 
 R('testi',[['RK','Rakesh Kamath','VP Engineering, TechNova Systems','Algo Orbit ran a cloud and DevOps program for our engineering team and the difference showed within weeks. Deployment cycles got faster, incidents dropped, and the trainers stayed engaged with us well after the sessions ended.'],['PM','Prajna Mendon','NMAMIT Nitte','The MERN bootcamp did not just teach me syntax, it taught me to think like a developer. Real projects, real mentors, real feedback. I had an offer before the program even ended. Best investment in my career, hands down.'],['SB','Prof. Shreya Bhat','Training & Placement Officer, SMVITM Bantakal','We brought Algo Orbit in for a placement readiness program covering DSA and development for our final years. Our placement percentage improved noticeably that season, and the faculty development sessions were just as valuable.']],function(x){return'<div class="c q"><div class="stars">★★★★★</div><p>"'+x[3]+'"</p><div class="who"><span class="av">'+x[0]+'</span><div><strong>'+x[1]+'</strong><small>'+x[2]+' · Google Review</small></div></div></div>'});
 
@@ -2396,8 +2358,8 @@ footer .wordmark .logo-mark{width:40px;height:40px;margin-right:12px}
 .c:hover .ic{animation:bobIc 4.2s ease-in-out infinite!important}
 .glow,.vb.glow,.gr.glow,.tl>div.glow{animation:none!important}
 #testi[hidden],#tDots[hidden]{display:none!important}
-/* ===== Client Stories: index.html design, slow looping marquee ===== */
-.rev{--r:24px;position:relative;overflow:hidden;background:var(--navy)!important;background-image:radial-gradient(700px 360px at 10% 0,rgba(143,132,242,.22),transparent 70%)!important}
+/* Client Stories: same section design, premium cards and drag-able marquee as index.html */
+.rev{--r:24px;background:var(--navy)!important;background-image:radial-gradient(700px 360px at 10% 0,rgba(143,132,242,.22),transparent 70%)!important;overflow:hidden;position:relative}
 .rev .head h2{color:#fff}.rev .head .lead,.rev .head p{color:#b4b6dc}
 .rev .tag,.rev .head .tag{background-image:linear-gradient(90deg,var(--vio),#fff,var(--vio))}
 .rev .head .tag{background-color:rgba(255,255,255,.06);border-color:rgba(255,255,255,.18);box-shadow:none}
@@ -2405,50 +2367,189 @@ footer .wordmark .logo-mark{width:40px;height:40px;margin-right:12px}
 .rev::before{width:520px;height:520px;left:-170px;bottom:-200px;background:radial-gradient(circle,rgba(91,75,232,.5),transparent 70%)}
 .rev::after{width:460px;height:460px;right:-150px;top:-160px;background:radial-gradient(circle,rgba(130,200,235,.3),transparent 70%);animation-direction:reverse}
 .rev>.wrap,.rev>.rv-mq{position:relative;z-index:1}
-.rv-mq{margin-top:44px;padding:22px 0 30px;touch-action:pan-y;contain:paint;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
-.rv-track{display:flex;gap:22px;width:max-content;animation:rvmq var(--rvd,90s) linear infinite;animation-play-state:running!important;will-change:transform;backface-visibility:hidden}
+
+/* marquee viewport + track */
+.rv-mq{position:relative;margin-top:44px;padding:26px 0 18px;touch-action:pan-y;contain:paint;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.rv-track{display:flex;gap:24px;align-items:stretch;width:max-content;animation:rvmq var(--rvd,90s) linear infinite;animation-play-state:running!important;will-change:transform;backface-visibility:hidden}
 @keyframes rvmq{to{transform:translateX(-50%)}}
-.rv-c{position:relative;flex:none;width:clamp(290px,30vw,400px);display:flex;flex-direction:column;gap:16px;padding:26px;border-radius:var(--r);background:#fff;color:var(--ink);border:1px solid rgba(255,255,255,.9);box-shadow:0 0 0 1px rgba(143,132,242,.35),0 0 26px -4px rgba(143,132,242,.45),0 24px 44px -26px rgba(0,0,0,.65);transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
-.rv-c .who{display:flex;align-items:center;gap:12px}
-.rv-c .av{width:46px;height:46px;border-radius:50%;object-fit:cover;background:var(--mist);box-shadow:0 0 0 2px #fff,0 0 0 4px var(--peri);transition:box-shadow .45s var(--ease)}
-.rv-c strong{display:block;font:600 15px/1.2 var(--fd);color:var(--navy);transition:color .35s}.rv-c small{color:var(--mute);font-size:13px}
-.rv-c p{flex:1;margin:0;font-size:14.5px;line-height:1.7;color:#3a3c5c}
-.rv-c .rs{color:#f0a91c;letter-spacing:3px;font-size:15px;text-shadow:0 0 12px rgba(240,169,28,.7)}
-.rv-c::before{content:"\201C";position:absolute;right:20px;top:8px;font:700 84px/1 Georgia,serif;color:var(--soft);pointer-events:none}
-.rv-c.g::before{color:#e3e0ff}
-.rv-c::after{content:"";position:absolute;inset:0;z-index:2;border-radius:inherit;padding:2px;opacity:.6;pointer-events:none;background:conic-gradient(from var(--ang),#5b4be8,#82c8eb,#a9a3ee,#5b4be8);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask-composite:exclude;transition:opacity .4s}
+/* JS-driven mode: drag, swipe, fling, keyboard and trackpad, with an auto-drift */
+.rvq-on .rv-track{animation:none!important;transform:translate3d(0,0,0)}
+.rvq-view{cursor:grab;touch-action:pan-y;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;outline:none}
+.rvq-view.drag{cursor:grabbing}
+.rvq-view img{-webkit-user-drag:none;pointer-events:none}
+.rvq-view:focus-visible{outline:2px solid var(--vio);outline-offset:-2px;border-radius:14px}
+
+/* review card */
+.rv-c{position:relative;flex:none;width:clamp(300px,31vw,420px);display:flex;flex-direction:column;gap:0;padding:0;overflow:hidden;border:0;border-radius:26px;color:var(--ink);
+ background:linear-gradient(165deg,#fff 0%,#f4f2ff 100%);
+ box-shadow:0 0 0 1px rgba(169,163,238,.55),0 30px 50px -28px rgba(0,0,0,.75),0 0 40px -12px rgba(143,132,242,.5);
+ transition:transform .55s var(--ease),box-shadow .55s var(--ease)}
+.rv-c::before{content:"\201C";position:absolute;right:16px;top:auto;bottom:-34px;left:auto;font:700 170px/1 Georgia,serif;color:rgba(91,75,232,.07);pointer-events:none;z-index:0;transition:transform .7s var(--ease),color .4s}
+.rv-c::after{content:"";position:absolute;inset:0;z-index:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .4s;background:radial-gradient(260px circle at var(--mx,50%) var(--my,0%),rgba(143,132,242,.22),transparent 65%)}
 .rv-c>*{position:relative;z-index:1}
-.rv-c .av.ini{display:grid;place-items:center;flex:none;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--ind),var(--peri));color:#fff;font:700 18px var(--fd)}
-.rv-c .rf{display:flex;align-items:center;justify-content:space-between;gap:10px}
-@media(hover:hover){.rv-c:hover{transform:translateY(-10px) scale(1.015);box-shadow:0 0 0 1px rgba(91,75,232,.6),0 0 44px 2px rgba(143,132,242,.7),0 34px 56px -24px rgba(0,0,0,.8)}.rv-c:hover::after{opacity:1;animation:spinAng 3s linear infinite}.rv-c:hover .av{box-shadow:0 0 0 2px #fff,0 0 0 4px var(--ind)}.rv-c:hover strong{color:var(--ind)}}
-@media(hover:none){.rv-c:active{transform:scale(.985)}}
-@media(max-width:700px){.rv-c{width:min(84vw,330px)}.rv-c .rf{flex-wrap:wrap}.rev::before,.rev::after{width:260px;height:260px}}
-@media(prefers-reduced-motion:reduce){.rv-mq{overflow-x:auto;-webkit-mask-image:none;mask-image:none}.rv-track{animation:none!important}.rev::before,.rev::after{animation:none}}
+.rv-bar{position:absolute!important;left:0;right:0;top:0;height:5px;z-index:3!important;background:linear-gradient(90deg,#5b4be8,#82c8eb,#a9a3ee,#5b4be8);background-size:300% 100%;animation:rvBar 6s linear infinite}
+@keyframes rvBar{to{background-position:300% 0}}
+.rv-top{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:28px 26px 0}
+.rv-q{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,var(--ind),var(--peri));box-shadow:0 12px 22px -10px rgba(91,75,232,.8);transition:transform .5s cubic-bezier(.34,1.56,.64,1)}
+.rv-src{display:inline-flex;align-items:center;gap:7px;padding:6px 12px 6px 10px;border-radius:99px;background:#fff;border:1px solid rgba(91,75,232,.2);font:600 12px/1 var(--fd);color:var(--navy);box-shadow:0 6px 14px -10px rgba(20,21,46,.5)}
+.rv-dot{width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,var(--ind),#82c8eb);box-shadow:0 0 0 3px rgba(91,75,232,.15)}
+.rv-c .rs{padding:16px 26px 0;letter-spacing:0;font-size:17px;line-height:1;margin:0;text-shadow:none;display:flex;gap:3px}
+.rv-c .rs span{display:inline-block;background:linear-gradient(180deg,#ffd45c,#f0a91c);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 2px 4px rgba(240,169,28,.4));animation:starTw 3.6s ease-in-out infinite;animation-delay:calc(var(--i)*.14s)}
+@keyframes starTw{0%,70%,100%{transform:translateY(0) scale(1)}80%{transform:translateY(-3px) scale(1.25)}90%{transform:translateY(0) scale(1)}}
+.rv-c p{flex:1;margin:0;padding:14px 26px 22px;font-size:15px;line-height:1.75;color:#34365a;font-style:normal}
+.rv-c .who{display:flex;align-items:center;gap:13px;padding:16px 26px 22px;border-top:1px dashed rgba(91,75,232,.28);background:linear-gradient(180deg,rgba(236,235,252,0),rgba(236,235,252,.75))}
+.rv-c .who>span:nth-child(2){flex:1;min-width:0}
+.rv-c strong{display:block;font:600 15.5px/1.2 var(--fd);color:var(--navy);transition:color .3s}
+.rv-c small{display:block;margin-top:3px;font-size:12.5px;color:var(--mute)}
+.rv-c .av{width:48px;height:48px;border-radius:50%;object-fit:cover;background:var(--mist);box-shadow:0 0 0 2px #fff,0 0 0 4px var(--peri),0 10px 18px -8px rgba(91,75,232,.6);transition:box-shadow .4s,transform .5s cubic-bezier(.34,1.56,.64,1)}
+.rv-c .av.ini{display:grid;place-items:center;flex:none;background:linear-gradient(135deg,var(--ind),var(--peri));color:#fff;font:700 18px var(--fd)}
+.rv-ok{flex:none;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,#22c55e,#16a34a);box-shadow:0 6px 14px -6px rgba(22,163,74,.8)}
+.rv-c.long p{font-size:13px;line-height:1.6}
+.rv-c.pr{transform:scale(.985)}
+@media(hover:hover){
+ .rv-c:hover{transform:translateY(-12px);box-shadow:0 0 0 2px rgba(91,75,232,.75),0 0 56px 0 rgba(143,132,242,.75),0 40px 60px -26px rgba(0,0,0,.85)}
+ .rv-c:hover::after{opacity:1}
+ .rv-c:hover .rv-q{transform:rotate(-10deg) scale(1.12)}
+ .rv-c:hover::before{transform:translate(-10px,-12px) scale(1.08);color:rgba(91,75,232,.13)}
+ .rv-c:hover .av{transform:scale(1.07)}
+ .rv-c:hover .rv-bar{animation-duration:2s}
+ .rv-c:hover strong{color:var(--ind)}
+}
+@media(hover:none){.rv-c:hover{transform:none}}
+@media(max-width:700px){
+ .rv-c{width:min(84vw,330px);border-radius:22px}
+ .rv-track{gap:16px}
+ .rv-top{padding:22px 20px 0}.rv-c .rs{padding:14px 20px 0;font-size:16px}
+ .rv-c p{padding:12px 20px 18px;font-size:14.5px;line-height:1.7}
+ .rv-c.long p{font-size:12.5px;line-height:1.55}
+ .rv-c .who{padding:14px 20px 18px}
+ .rv-q{width:40px;height:40px;border-radius:12px}
+ .rev::before,.rev::after{width:260px;height:260px}
+}
+@media(max-width:380px){.rv-c{width:86vw}.rv-src{font-size:11px;padding:5px 10px 5px 8px}}
+@media(prefers-reduced-motion:reduce){.rv-mq{overflow-x:auto;-webkit-mask-image:none;mask-image:none}.rv-track{animation:none!important}.rev::before,.rev::after,.rv-bar,.rv-c .rs span{animation:none!important}}
 </style>
 <script id="training-stories-marquee-js">
+/* Client Stories: builds the index.html review cards (same reviews as before), then runs the drag-able marquee */
 (function(){
- var t=document.getElementById('rvTrack'),src=document.getElementById('testi');if(!t)return;
+ var view=document.querySelector('.rv-mq'),track=document.getElementById('rvTrack'),src=document.getElementById('testi');
+ if(!view||!track)return;
  function esc(x){return String(x).replace(/&/g,'&amp;').replace(/</g,'&lt;')}
- var R=[];
+ var RV=[];
  if(src)[].forEach.call(src.querySelectorAll('.c.q'),function(c){
   var p=c.querySelector('p'),n=c.querySelector('strong'),r=c.querySelector('small'),a=c.querySelector('.av');if(!p||!n)return;
-  R.push({n:n.textContent,r:r?r.textContent:'',a:a?a.textContent:n.textContent.charAt(0),t:p.textContent.replace(/^"|"$/g,'')})});
- R=R.concat([
+  RV.push({n:n.textContent,r:r?r.textContent:'',a:a?a.textContent:n.textContent.charAt(0),t:p.textContent.replace(/^"|"$/g,''),gg:1})});
+ RV=RV.concat([
   {n:'Priyadarshana K',r:'Google review',g:1,t:'Had an excellent experience with Algo Orbit Innovations. The team is professional, responsive, and genuinely knowledgeable in their field. Communication was smooth throughout, and the quality of work exceeded my expectations. Highly recommend them to anyone looking for a reliable and skilled partner.'},
   {n:'Matthew Wilson',r:'Google review',g:1,h:1,t:'Really happy with the work AlgoOrbit did for us. We worked with the team on a custom business management system, and the whole process was smooth from start to finish. Everyone was responsive, easy to communicate with, and handled changes quickly.<br><br>Mr. Nishan was great to work with personally. Very approachable, professional, and knowledgeable. The whole team did a great job, and we really appreciated their support throughout the project. We\u2019d definitely recommend AlgoOrbit and would love to work with them again on future projects.'},
   {n:'Dhrithi Rai B',r:'Google review',g:1,t:'My experience with the Flutter project was very useful and interesting. I learned to create attractive user interfaces, use Dart and Flutter widgets, connect Firebase, and fix errors during development. It improved my coding, debugging, and problem-solving skills.'},
   {n:'Riya Fernandes',r:'Owner, Brew & Bean Caf\u00e9',i:'https://www.algoorbit.in/static/images/review/riya.png',t:'ALGO ORBIT completely transformed how we run our caf\u00e9. The management system they built handles orders, staff scheduling, and payments seamlessly. The team was professional, fast, and genuinely cared about our success.'},
   {n:'Dr. Meera Rao',r:'Harmony Health Clinic',i:'https://www.algoorbit.in/static/images/review/meera.png',t:'The clinic management system ALGO ORBIT delivered was clean, practical, and exceeded every expectation. Patient scheduling, records, and billing, all in one intuitive system. Our staff adopted it in days.'}
  ]);
- var one=R.map(function(v){
-  var av=v.i?'<img class="av" src="'+v.i+'" alt="" width="46" height="46" loading="lazy">':'<span class="av ini" aria-hidden="true">'+esc(v.g?v.n.charAt(0):v.a)+'</span>';
-  return '<figure class="rv-c'+(v.g?' g':'')+'"><div class="who">'+av+'<span><strong>'+esc(v.n)+'</strong><small>'+esc(v.r)+'</small></span></div><p>\u201C'+(v.h?v.t:esc(v.t))+'\u201D</p><div class="rf"><div class="rs" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div></figure>'}).join('');
- var rn=Math.max(2,Math.ceil(innerWidth*2/(R.length*330)));
- t.innerHTML=one.repeat(rn*2);
- [].forEach.call(t.querySelectorAll('figure'),function(f,i){if(i>=R.length){f.setAttribute('aria-hidden','true')}});
- t.style.setProperty('--rvd',(R.length*rn*28)+'s');
+ var GL='<svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="#4285F4" d="M22.5 12.3c0-.8-.1-1.5-.2-2.2H12v4.2h5.9a5 5 0 0 1-2.2 3.3v2.7h3.5c2.1-1.9 3.3-4.7 3.3-8z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.5-2.7c-1 .7-2.2 1-3.8 1-2.9 0-5.4-2-6.3-4.6H2.1v2.8A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.7 13.9a6.6 6.6 0 0 1 0-4.2V6.9H2.1a11 11 0 0 0 0 10z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3.1.6 4.2 1.7l3.1-3.1A11 11 0 0 0 2.1 6.9l3.6 2.8C6.6 7.3 9.1 5.4 12 5.4z"/></svg>';
+ var QS='<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M9.3 5C5.8 6.5 3.5 9.6 3.5 13.6V19h6.2v-6H6.6c.1-2.2 1.2-3.8 3.3-4.8zm9 0c-3.5 1.5-5.8 4.6-5.8 8.6V19h6.2v-6h-3.1c.1-2.2 1.2-3.8 3.3-4.8z"/></svg>';
+ var OK='<span class="rv-ok" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>';
+ var STAR='<span style="--i:0">&#9733;</span><span style="--i:1">&#9733;</span><span style="--i:2">&#9733;</span><span style="--i:3">&#9733;</span><span style="--i:4">&#9733;</span>';
+ track.innerHTML=RV.map(function(v){
+  var google=v.g||v.gg,plain=v.t.replace(/<br>/g,'');
+  var av=v.i?'<img class="av" src="'+v.i+'" alt="'+esc(v.n)+'" width="46" height="46" loading="lazy">':'<span class="av ini" aria-hidden="true">'+esc(v.g?v.n.charAt(0):v.a)+'</span>';
+  return '<figure class="rv-c'+(v.g?' g':'')+(plain.length>320?' long':'')+'"><span class="rv-bar" aria-hidden="true"></span><div class="rv-top"><span class="rv-q">'+QS+'</span><span class="rv-src">'+(google?GL+'Google':'<i class="rv-dot"></i>Client')+'</span></div><div class="rs" aria-label="5 out of 5 stars">'+STAR+'</div><p>'+(v.h?v.t:esc(v.t))+'</p><div class="who">'+av+'<span><strong>'+esc(v.n)+'</strong><small>'+esc(v.r)+'</small></span>'+OK+'</div></figure>'}).join('');
 })();
 </script>
+<script id="training-stories-drag-js">
+/* Client Stories marquee: seamless loop + drag / swipe / fling / keyboard / trackpad, same behaviour as index.html */
+(function(){
+ var view=document.querySelector('.rv-mq'),track=document.getElementById('rvTrack');
+ if(!view||!track)return;
+ var R=matchMedia('(prefers-reduced-motion:reduce)').matches;
+ var Q=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+ var orig=Q('.rv-c',track);
+ function clone(){orig.forEach(function(o){var d=o.cloneNode(true);d.setAttribute('aria-hidden','true');d.setAttribute('data-mq','c');Q('img',d).forEach(function(i){i.alt='';i.setAttribute('draggable','false')});track.appendChild(d)})}
+ /* spotlight follows the cursor on every card (delegated, so clones work too) */
+ var raf=0,tx=null,ex=0,ey=0;
+ view.addEventListener('pointermove',function(e){if(e.pointerType==='touch')return;var t=e.target.closest&&e.target.closest('.rv-c');if(!t)return;tx=t;ex=e.clientX;ey=e.clientY;
+  if(!raf)raf=requestAnimationFrame(function(){raf=0;var r=tx.getBoundingClientRect();tx.style.setProperty('--mx',(ex-r.left)+'px');tx.style.setProperty('--my',(ey-r.top)+'px')})},{passive:true});
+ /* press feel */
+ view.addEventListener('pointerdown',function(e){var c=e.target.closest&&e.target.closest('.rv-c');if(c)c.classList.add('pr')});
+ ['pointerup','pointercancel','pointerleave'].forEach(function(t){view.addEventListener(t,function(){Q('.rv-c.pr',track).forEach(function(c){c.classList.remove('pr')})},true)});
+
+ if(R){ /* reduced motion: native horizontal scroller, one set only */
+  return}
+
+ view.classList.add('rvq-view');view.parentNode.classList.add('rvq-on');
+ view.setAttribute('tabindex','0');view.setAttribute('role','group');view.setAttribute('aria-roledescription','carousel');view.setAttribute('aria-label','Client and learner reviews');
+ var x=0,half=0,vel=0,drag=false,id=null,sx=0,sy=0,lx=0,lt=0,moved=0,resume=0,last=0,visible=true,suppress=false,decided=false,horizontal=false;
+ function cards(){return Q('.rv-c',track)}
+ /* each half must be wider than the viewport so the loop never shows a gap */
+ function fill(){
+  var c=cards(),n=orig.length;if(!n)return;
+  while(track.querySelectorAll('.rv-c').length<n*2)clone();
+  c=cards();
+  var one=(c[n].offsetLeft-c[0].offsetLeft)||1,need=Math.max(1,Math.ceil(innerWidth*1.4/one)),sets=c.length/n,want=need*2;
+  while(sets<want||sets%2){clone();sets++}
+ }
+ function measure(){var c=cards();half=c.length>1?c[c.length/2].offsetLeft-c[0].offsetLeft:0}
+ function paint(){if(half){x=x%half;if(x>0)x-=half}track.style.transform='translate3d('+x.toFixed(2)+'px,0,0)'}
+ function tick(t){
+  requestAnimationFrame(tick);
+  var dt=Math.min(.05,(t-(last||t))/1000);last=t;if(!visible||!half)return;
+  if(!drag){
+   if(Math.abs(vel)>6){x+=vel*dt;vel*=Math.pow(.04,dt)}
+   else{vel=0;if(t>resume)x-=(innerWidth<700?18:14)*dt}
+  }
+  paint();
+ }
+ view.addEventListener('pointerdown',function(e){
+  if(e.pointerType==='mouse'&&e.button!==0)return;
+  drag=true;decided=false;horizontal=false;moved=0;id=e.pointerId;sx=lx=e.clientX;sy=e.clientY;lt=performance.now();vel=0;
+ });
+ view.addEventListener('pointermove',function(e){
+  if(!drag||e.pointerId!==id)return;
+  var dx=e.clientX-lx,now=performance.now(),dt=Math.max(1,now-lt)/1000;
+  if(!decided){
+   var ax=Math.abs(e.clientX-sx),ay=Math.abs(e.clientY-sy);
+   if(ax>5||ay>5){decided=true;horizontal=ax>=ay;if(horizontal){try{view.setPointerCapture(id)}catch(_){}view.classList.add('drag')}}
+   if(!horizontal)return;
+  }
+  if(!horizontal)return;
+  x+=dx;moved+=Math.abs(dx);vel=vel*.6+(dx/dt)*.4;lx=e.clientX;lt=now;paint();
+ });
+ function end(e){
+  if(!drag||(e&&e.pointerId!==id))return;
+  drag=false;view.classList.remove('drag');
+  if(performance.now()-lt>90)vel=0;
+  vel=Math.max(-2600,Math.min(2600,vel));
+  resume=performance.now()+1400;
+  if(moved>6){suppress=true;setTimeout(function(){suppress=false},60)}
+  try{view.releasePointerCapture(id)}catch(_){}
+ }
+ view.addEventListener('pointerup',end);view.addEventListener('pointercancel',end);
+ view.addEventListener('click',function(e){if(suppress){e.preventDefault();e.stopPropagation()}},true);
+ view.addEventListener('dragstart',function(e){e.preventDefault()});
+ view.addEventListener('wheel',function(e){
+  if(Math.abs(e.deltaX)>Math.abs(e.deltaY)&&e.deltaX){e.preventDefault();x-=e.deltaX;vel=0;resume=performance.now()+1400;paint()}
+ },{passive:false});
+ function step(){var c=cards()[0];return c?c.getBoundingClientRect().width+(parseFloat(getComputedStyle(track).columnGap)||24):320}
+ view.addEventListener('keydown',function(e){
+  if(e.key==='ArrowRight'){vel=-step()*3.22;resume=performance.now()+1400;e.preventDefault()}
+  else if(e.key==='ArrowLeft'){vel=step()*3.22;resume=performance.now()+1400;e.preventDefault()}
+ });
+ if('IntersectionObserver' in window){new IntersectionObserver(function(es){visible=es[0].isIntersecting;last=0},{rootMargin:'200px 0px'}).observe(view)}
+ function init(){fill();measure();paint()}
+ init();addEventListener('load',init);
+ if(document.fonts&&document.fonts.ready)document.fonts.ready.then(init);
+ var rt;addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(init,120)});
+ requestAnimationFrame(tick);
+})();
+</script>
+<style id="training-workshops-grid">
+/* Technology Workshops: 4 cards sit as a balanced 2 x 2 on desktop (was 3 + 1). Tablet is already 2 x 2; mobile keeps its own layout. */
+@media(min-width:1001px){
+ #ws.g3{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+ #ws.g3>.c .cimg img{aspect-ratio:2/1}
+ #ws.g3>.c ul{columns:1}
+}
+</style>
 <style id="training-replay">
 /* =====================================================================
    REPLAY LAYER (added last): every reveal animation plays again, in both
