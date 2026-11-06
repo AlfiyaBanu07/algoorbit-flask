@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy | ALGO ORBIT - Your Privacy Matters</title>
+<meta name="description" content="Algo Orbit's commitment to protecting your privacy. Learn how we collect, use, and safeguard your personal information.">
+<meta name="keywords" content="Privacy Policy, Data Protection, GDPR, Information Security, Algo Orbit">
+<meta name="theme-color" content="#5b4be8">
+<link rel="canonical" href="https://www.algoorbit.in/privacy-policy.html">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%230e0f2a'/%3E%3Cline x1='13.5' y1='28' x2='21.5' y2='12.5' stroke='%23fff' stroke-width='10' stroke-linecap='round'/%3E%3Ccircle cx='30' cy='27.5' r='5' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f5fc;--mist:#ecebfc;--soft:#dedcf7;--glass:#d9e4f5;--line:#e3e2f2;--vio:#a9a3ee;--peri:#8f84f2;--ind:#5b4be8;--indd:#4538c4;--dk:#1d1f48;--navy:#0e0f2a;--ink:#14152e;--mute:#5d5f7a;--fd:'Poppins','Open Sans',system-ui,sans-serif;--ease:cubic-bezier(.65,0,.2,1);--r:20px;--sh:0 1px 2px rgba(20,21,46,.05),0 10px 30px -14px rgba(20,21,46,.18)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+body{font:16px/1.65 'Open Sans',system-ui,sans-serif;color:var(--ink);background:linear-gradient(180deg,#f6f5fc,#ebe9fd 60%,#f2f0fd);-webkit-font-smoothing:antialiased}
+html,body{max-width:100%;overflow-x:clip}
+img,svg{max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+h1,h2,h3,h4{font-family:var(--fd);font-weight:600;line-height:1.15;letter-spacing:-.02em;color:var(--navy);text-wrap:balance}
+p{text-wrap:pretty}
+::selection{background:rgba(91,75,232,.22);color:var(--navy)}
+:focus-visible{outline:2px solid var(--ind);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.ui{width:1.3em;height:1.3em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+h1,h2,h3,h4,p,li,strong,small,summary,a{overflow-wrap:break-word}
+.skip{position:absolute;left:12px;top:-64px;z-index:2000;background:#fff;color:var(--navy);padding:10px 16px;border-radius:10px;font-weight:600;box-shadow:0 8px 24px rgba(14,15,42,.2);transition:top .2s}
+.skip:focus{top:12px}
+::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{background:#f6f5fc}::-webkit-scrollbar-thumb{background:var(--ind);border:2px solid #f6f5fc;border-radius:6px}
+
+/* progress bar */
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--ind),var(--peri) 60%,#82c8eb);z-index:200;box-shadow:0 0 10px rgba(91,75,232,.55);transition:width .12s linear}
+
+/* header (dark bar, same as home) */
+.site-header{position:sticky;top:0;z-index:100;background:rgba(14,15,42,.97);border-bottom:1px solid rgba(143,132,242,.28);transition:box-shadow .3s;animation:hdrIn .8s var(--ease) .1s both}
+.site-header.scrolled{box-shadow:0 12px 30px rgba(0,0,0,.4)}
+@keyframes hdrIn{from{transform:translateY(-100%);opacity:0}}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:52px;max-width:none;margin:0;padding-inline:clamp(20px,5vw,88px)}
+.site-logo{display:flex;align-items:center;gap:10px}
+.logo-mark{width:30px;height:30px}.logo-mark rect{fill:var(--ind)}.logo-mark line{stroke:#fff;stroke-width:10;stroke-linecap:round}.logo-mark circle{fill:#fff}
+.logo-text{font:800 17px var(--fd);letter-spacing:.02em}.logo-text b{color:var(--vio);font-weight:800}.logo-text span{color:#fff}
+.nav-links{display:flex;align-items:center;gap:24px;font-size:14px;font-weight:500}
+.nav-links>li>a,.dd-btn{position:relative;color:#c9cae9;padding:4px 0;transition:color .2s}
+.nav-links>li>a:hover,.dd-btn:hover,.has-dd:hover .dd-btn,.has-dd.open .dd-btn{color:#fff}
+.nav-links>li>a::after,.dd-btn::after{content:"";position:absolute;left:0;right:0;bottom:1px;height:2px;background:var(--vio);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
+.nav-links>li>a:hover::after,.dd-btn:hover::after{transform:scaleX(1)}
+.dd-btn{background:none;border:0;font:inherit;cursor:pointer}
+.tri{display:inline-block;width:0;height:0;margin-left:8px;vertical-align:middle;border-left:4px solid transparent;border-right:4px solid transparent;border-top:5px solid currentColor;transition:transform .25s var(--ease)}
+.has-dd:hover>.dd-btn .tri,.has-dd.open>.dd-btn .tri{transform:rotate(180deg)}
+.has-dd{position:relative}
+.dd{position:absolute;top:100%;left:-14px;min-width:230px;background:rgba(255,255,255,.97);border:1px solid var(--line);box-shadow:0 14px 32px rgba(20,21,46,.1);padding:8px 0;border-radius:16px;opacity:0;visibility:hidden;transform:translateY(6px);transition:.2s}
+.has-dd:hover .dd,.has-dd.open .dd{opacity:1;visibility:visible;transform:none}
+.dd a{display:block;padding:10px 18px;font-size:14px;color:var(--ink);transition:background .25s,color .25s,padding-left .25s var(--ease)}
+.dd a:hover{background:var(--navy);color:#fff;padding-left:24px}
+.menu-toggle{display:none;background:none;border:1px solid rgba(255,255,255,.3);color:#fff;border-radius:10px;width:38px;height:38px;font-size:18px;cursor:pointer}
+@media(min-width:821px){.nav-links>li{animation:navIn .7s var(--ease) both}.nav-links>li:nth-child(1){animation-delay:.25s}.nav-links>li:nth-child(2){animation-delay:.32s}.nav-links>li:nth-child(3){animation-delay:.39s}.nav-links>li:nth-child(4){animation-delay:.46s}.nav-links>li:nth-child(5){animation-delay:.53s}.nav-links>li:nth-child(6){animation-delay:.6s}}
+@keyframes navIn{from{opacity:0;transform:translateY(-10px)}}
+
+/* buttons */
+.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;height:48px;min-width:190px;padding:0 26px;border-radius:999px;font:600 15px/1 'Open Sans',sans-serif;border:2px solid transparent;cursor:pointer;white-space:nowrap;transition:transform .3s var(--ease),box-shadow .3s,background .3s,color .3s,border-color .3s}
+.btn::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.4) 50%,transparent 70%);transform:translateX(-120%);transition:transform .7s var(--ease);pointer-events:none}
+.btn:hover::after{transform:translateX(120%)}
+.btn-p{background:var(--ind);border-color:var(--ind);color:#fff;box-shadow:0 10px 24px rgba(91,75,232,.3)}
+.btn-p:hover,.btn-p:focus-visible{background:var(--navy);border-color:var(--navy);box-shadow:0 14px 30px rgba(14,15,42,.4);transform:translateY(-2px)}
+.btn-o{background:rgba(255,255,255,.85);border-color:rgba(255,255,255,.9);color:var(--ink)}
+.btn-o:hover,.btn-o:focus-visible{background:var(--navy);border-color:var(--navy);color:#fff;transform:translateY(-2px)}
+.btn:active{transform:scale(.97)}
+.btn .rp{position:absolute;width:220px;height:220px;margin:-110px 0 0 -110px;border-radius:50%;background:rgba(255,255,255,.45);transform:scale(0);animation:rp .7s ease-out forwards;pointer-events:none}
+@keyframes rp{to{transform:scale(1);opacity:0}}
+
+/* hero */
+.hero{position:relative;isolation:isolate;overflow:hidden;display:flex;align-items:center;min-height:clamp(420px,62vh,560px);background:radial-gradient(900px 560px at 88% 0,rgba(143,132,242,.38),transparent 62%),radial-gradient(700px 480px at 0 70%,rgba(130,200,235,.32),transparent 62%),linear-gradient(180deg,var(--bg),var(--mist))}
+.hero::before{content:"";position:absolute;left:-120px;top:-80px;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle,rgba(143,132,242,.5),transparent 70%);z-index:-1;pointer-events:none;opacity:.35}
+.hero::after{content:"";position:absolute;right:8%;bottom:-120px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(130,200,235,.45),transparent 70%);z-index:-1;pointer-events:none;animation:orb 9s ease-in-out infinite}
+@keyframes orb{0%,100%{opacity:.55;transform:translate(0,0) scale(1)}50%{opacity:.95;transform:translate(30px,24px) scale(1.15)}}
+.pcv{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+.orbit{position:absolute;right:-140px;top:50%;width:680px;height:680px;margin-top:-340px;z-index:-2;pointer-events:none;opacity:.55}
+.orbit svg{width:100%;height:100%;overflow:visible}.orbit circle{fill:none;stroke:rgba(91,75,232,.22);stroke-width:1}.orbit .d2{stroke-dasharray:3 9}.orbit .dot{fill:var(--ind);stroke:none}
+.orbit g{transform-box:view-box;transform-origin:300px 300px}.o1{animation:spin 28s linear infinite}.o2{animation:spin 44s linear infinite reverse}.o3{animation:spin 18s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero-grid{width:100%;padding:clamp(40px,6vw,72px) clamp(24px,5vw,88px)}
+.hero-copy{max-width:680px}
+.sbadge{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:100px;font:700 10.5px/1 var(--fd);letter-spacing:.16em;text-transform:uppercase;margin-bottom:18px;background:rgba(91,75,232,.08);border:1px solid rgba(91,75,232,.25);color:var(--ind);animation:gbadge 2.5s ease-in-out infinite}
+.sbadge .ui{width:14px;height:14px}
+@keyframes gbadge{0%,100%{box-shadow:0 0 14px rgba(91,75,232,.15)}50%{box-shadow:0 0 26px rgba(143,132,242,.45)}}
+.hero h1{font-size:clamp(2.1rem,1rem + 3vw,3.7rem);line-height:1.1;letter-spacing:-.03em;margin-bottom:20px}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--ind),#82c8eb,var(--ind));background-size:200% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shimmer 6s linear infinite}
+@keyframes shimmer{to{background-position:200% 0}}
+.hero .lead{font-size:clamp(1rem,.95rem + .25vw,1.12rem);color:var(--mute);max-width:560px;margin-bottom:26px}
+.upd{display:inline-flex;align-items:center;gap:10px;padding:10px 20px;background:#fff;border:1px solid var(--line);border-radius:24px;font-size:14px;color:var(--mute);box-shadow:var(--sh)}
+.upd .ui{color:var(--ind);width:18px;height:18px}.upd strong{color:var(--navy)}
+.hero-copy>*{animation:in .8s var(--ease) both}
+.hero-copy>:nth-child(1){animation-delay:.1s}.hero-copy>:nth-child(2){animation-delay:.22s}.hero-copy>:nth-child(3){animation-delay:.36s}.hero-copy>:nth-child(4){animation-delay:.5s}
+@keyframes in{from{opacity:0;transform:translateY(22px)}}
+
+/* quick stat strip */
+.qs{padding:0 0 8px;margin-top:-44px;position:relative;z-index:2}
+.qgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.qcard{text-align:center;padding:26px 22px;background:linear-gradient(160deg,#fff,#ece9ff);border:1px solid #fff;border-radius:var(--r);box-shadow:0 12px 30px rgba(91,75,232,.14),inset 0 1px 0 #fff}
+.qcard .ic{margin:0 auto 14px}
+.qcard h3{font-size:1.1rem;margin-bottom:6px}.qcard p{font-size:14px;color:var(--mute)}
+.ic{display:grid;place-items:center;width:50px;height:50px;border-radius:15px;background:linear-gradient(135deg,var(--ind),var(--peri));color:#fff;box-shadow:0 8px 18px rgba(91,75,232,.3);flex:none;transition:transform .5s cubic-bezier(.34,1.56,.64,1)}
+.ic.b2{background:linear-gradient(135deg,#2d3a8c,#5b8fe8)}.ic.b3{background:linear-gradient(135deg,#7a6df0,#a9a3ee)}.ic.b4{background:linear-gradient(135deg,#2a8fcf,#82c8eb)}.ic.b5{background:linear-gradient(135deg,#4538c4,#14153a)}
+
+/* hover system with spotlight */
+.hv{position:relative;transition:transform .45s var(--ease),box-shadow .45s var(--ease),border-color .3s}
+.hv{--rx:0deg;--ry:0deg;transform-style:preserve-3d}
+.hv.tilting{transition:transform .12s linear,box-shadow .4s,border-color .3s}
+@media(hover:hover){
+ .hv:hover{transform:perspective(1000px) rotateX(var(--rx)) rotateY(var(--ry)) translateY(-6px);box-shadow:0 28px 56px rgba(91,75,232,.22),inset 0 1px 0 #fff}
+}
+.spot{position:absolute;inset:0;z-index:3;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .4s;background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgba(143,132,242,.16),transparent 62%)}
+.spot::after{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.5px;background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),#5b4be8,rgba(130,200,235,.75) 45%,transparent 75%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask-composite:exclude}
+*:hover>.spot,.spot-on>.spot{opacity:1}
+@media(hover:hover){
+ .qcard:hover,.bx:hover,.cc:hover,.rt:hover{transform:translateY(-6px);box-shadow:0 22px 44px -18px rgba(91,75,232,.4);border-color:rgba(91,75,232,.4)}
+ .qcard:hover .ic,.bx:hover .ic,.cc:hover .ic,.rt:hover .ic{transform:rotate(-8deg) scale(1.1)}
+}
+
+/* layout */
+.main{padding:clamp(48px,6vw,80px) 0 clamp(64px,8vw,100px)}
+.layout{display:grid;grid-template-columns:290px minmax(0,1fr);gap:40px;align-items:start}
+.toc{position:sticky;top:76px;max-height:calc(100vh - 100px);overflow-y:auto;background:linear-gradient(160deg,#1c1e50,#0e0f2a);border-radius:24px;padding:26px 18px;color:#fff;box-shadow:0 20px 44px -18px rgba(14,15,42,.55);scrollbar-width:thin;scrollbar-color:var(--ind) transparent}
+.toc::-webkit-scrollbar{width:4px}.toc::-webkit-scrollbar-thumb{background:var(--ind);border-radius:4px}
+.toc h3{color:#fff;font-size:1.05rem;display:flex;align-items:center;gap:10px;margin:0 8px 16px}
+.toc h3 .ui{color:var(--vio)}
+.toc-prog{height:3px;margin:0 8px 14px;background:rgba(255,255,255,.14);border-radius:3px;overflow:hidden}.toc-prog i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--peri),#82c8eb)}
+.toc a{display:flex;align-items:center;gap:10px;padding:10px 12px;border-left:3px solid transparent;border-radius:0 10px 10px 0;font-size:13.5px;color:#c9cae9;transition:background .3s,color .3s,border-color .3s,transform .3s var(--ease)}
+.toc a b{font:600 11px/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--vio);letter-spacing:.08em;min-width:22px}
+.toc a:hover{background:rgba(143,132,242,.14);border-left-color:var(--peri);color:#fff;transform:translateX(4px)}
+.toc a.active{background:rgba(143,132,242,.24);border-left-color:#82c8eb;color:#fff;font-weight:600}
+.toc a.active b{color:#82c8eb}
+
+/* policy sections */
+.stack{display:flex;flex-direction:column;gap:28px;min-width:0}
+.ps{position:relative;padding:clamp(24px,3.4vw,38px);background:linear-gradient(160deg,#fff,#f0eeff);border:1px solid #fff;border-radius:24px;box-shadow:0 12px 30px rgba(91,75,232,.12),inset 0 1px 0 #fff;transition:transform .45s var(--ease),box-shadow .45s,border-color .3s;overflow:hidden}
+.ps::before{content:"";position:absolute;left:0;top:0;width:4px;height:0;background:linear-gradient(180deg,var(--ind),#82c8eb);transition:height .5s var(--ease);z-index:4}
+.ps:hover::before,.ps.cur::before{height:100%}
+@media(hover:hover){.ps:hover{box-shadow:0 26px 52px -22px rgba(91,75,232,.4);border-color:rgba(91,75,232,.28)}}
+.ps-h{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.sn{display:inline-grid;place-items:center;min-width:40px;height:40px;padding:0 6px;border-radius:12px;background:var(--navy);color:#fff;font:600 13px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.06em;transition:background .35s,box-shadow .35s}
+.ps:hover .sn,.ps.cur .sn{background:var(--ind);box-shadow:0 0 0 6px rgba(91,75,232,.16)}
+.ps h2{font-size:clamp(1.5rem,1.1rem + 1.4vw,2.1rem);line-height:1.2;letter-spacing:-.025em}
+.ps h3.sh{font-size:1.2rem;margin:26px 0 12px;color:var(--ind)}
+.ps h3.sh:first-of-type{margin-top:0}
+.ps h3.sh.s2{color:#4538c4}.ps h3.sh.s3{color:#2a8fcf}
+.ps p{color:var(--mute);margin-bottom:14px}
+.ps p strong{color:var(--navy)}
+.ps p:last-child{margin-bottom:0}
+
+/* lists */
+.cl{margin:0 0 20px}
+.cl li{position:relative;padding-left:26px;margin-bottom:10px;color:var(--ink);font-size:15px}
+.cl li::before{content:"";position:absolute;left:0;top:9px;width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,var(--ind),var(--peri));box-shadow:0 0 8px rgba(143,132,242,.7)}
+.cl.sm li{font-size:14px;margin-bottom:8px}
+.cl strong{color:var(--navy)}
+
+/* boxes */
+.bgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-bottom:22px}
+.bgrid.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.bx{position:relative;padding:20px;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--sh)}
+.bx h4{display:flex;align-items:center;gap:10px;font-size:1rem;margin-bottom:8px}
+.bx h4 .ui{color:var(--ind);width:20px;height:20px}
+.bx p{font-size:14px;margin:0}
+.bx.bl{border-left:4px solid var(--ind);border-radius:6px 16px 16px 6px}
+.bx.bl h3{display:flex;align-items:center;gap:10px;font-size:1.05rem;margin-bottom:6px}
+.bx.bl h3 .ui{width:20px;height:20px}
+.bx.bl p{font-size:14.5px}
+.c1{border-left-color:#5b4be8!important}.c1 .ui{color:#5b4be8}
+.c2{border-left-color:#8f84f2!important}.c2 .ui{color:#7a6df0}
+.c3{border-left-color:#ef5a6f!important}.c3 .ui{color:#ef5a6f}
+.c4{border-left-color:#f0a91c!important}.c4 .ui{color:#d98a00}
+.c5{border-left-color:#2fa7e0!important}.c5 .ui{color:#2a8fcf}
+.c6{border-left-color:#4538c4!important}.c6 .ui{color:#4538c4}
+.c7{border-left-color:#14a89a!important}.c7 .ui{color:#14a89a}
+.stk{display:flex;flex-direction:column;gap:14px;margin-bottom:20px}
+
+/* timeline */
+.tl{display:flex;flex-direction:column;gap:26px;margin-bottom:22px}
+.ti{position:relative;padding-left:34px}
+.ti::before{content:"";position:absolute;left:0;top:4px;width:14px;height:14px;border-radius:50%;background:linear-gradient(135deg,var(--ind),var(--peri));box-shadow:0 0 0 4px rgba(91,75,232,.18)}
+.ti::after{content:"";position:absolute;left:6px;top:22px;width:2px;height:calc(100% + 8px);background:linear-gradient(180deg,rgba(91,75,232,.5),transparent)}
+.ti:last-child::after{display:none}
+.ti h3{font-size:1.1rem;margin-bottom:8px}
+.ti:nth-child(1) h3{color:var(--ind)}.ti:nth-child(2) h3{color:#7a6df0}.ti:nth-child(3) h3{color:#2a8fcf}.ti:nth-child(4) h3{color:#d98a00}.ti:nth-child(5) h3{color:#ef5a6f}
+
+/* highlight */
+.hl{display:flex;align-items:flex-start;gap:12px;margin:18px 0 0;padding:16px 20px;background:rgba(139,92,246,.08);border-left:4px solid var(--peri);border-radius:8px 14px 14px 8px;font-size:14.5px;color:#2f3150}
+.hl .ui{color:var(--ind);margin-top:3px;width:20px;height:20px}
+.hl strong{color:var(--navy)}
+.hl.w .ui{color:#d98a00}.hl.w{border-left-color:#f0a91c;background:rgba(240,169,28,.1)}
+
+/* feature cards (security) */
+.fc{padding:22px;border-radius:18px;border:1px solid rgba(var(--g),.28);background:linear-gradient(160deg,rgba(var(--g),.1),#fff 70%)}
+.fc .ic{margin-bottom:14px}
+.fc h3{font-size:1.1rem;margin-bottom:10px}
+.fc1{--g:91,75,232}.fc2{--g:143,132,242}.fc3{--g:47,167,224}.fc4{--g:240,169,28}
+
+/* dark info band */
+.band{margin-top:22px;padding:24px;border-radius:20px;color:#fff;background:radial-gradient(420px 260px at 100% 0,rgba(91,75,232,.5),transparent 70%),linear-gradient(145deg,var(--navy),var(--dk));box-shadow:0 24px 44px -22px rgba(14,15,42,.6)}
+.band h3{color:#fff;font-size:1.15rem;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.band h3 .ui{color:var(--vio)}
+.band p{color:#b4b6dc!important;font-size:14.5px}
+.band p strong{color:#fff}
+.band .loc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:14px}
+.band .loc div{text-align:center;padding:16px 10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:14px;transition:background .3s,transform .4s var(--ease),border-color .3s}
+.band .loc div:hover{background:rgba(255,255,255,.16);border-color:var(--vio);transform:translateY(-4px)}
+.band .loc .ui{width:30px;height:30px;color:var(--vio);display:block;margin:0 auto 8px}
+.band .loc b{font:600 14px var(--fd)}
+
+/* rights */
+.rt{display:flex;gap:16px;align-items:flex-start;padding:18px 20px;background:#fff;border:1px solid var(--line);border-left-width:4px;border-radius:6px 16px 16px 6px;box-shadow:var(--sh)}
+.rt .ic{width:42px;height:42px;border-radius:12px}
+.rt h3{font-size:1.02rem;margin-bottom:4px}.rt p{font-size:14px;margin:0}
+
+/* contact */
+.cgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.cc{position:relative;padding:24px;background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:var(--sh)}
+.cc .top{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.cc h3{font-size:1.02rem}.cc small{display:block;color:var(--mute);font-size:13px}
+.cc a.lk{font-weight:600;color:var(--ind);transition:color .25s,letter-spacing .3s var(--ease)}
+.cc a.lk:hover{color:var(--navy);letter-spacing:.01em}
+.cc address{font-style:normal;color:var(--mute);font-size:14.5px;line-height:1.7}
+
+/* footer (same as home) */
+.site-footer{background:#0a0b20;color:#b9bbd2;padding:clamp(44px,6vw,68px) 0 0;font-size:14.5px}
+.fgrid{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:36px;padding-bottom:44px}
+.fgrid h4{color:#fff;font-size:13px;margin-bottom:16px;letter-spacing:.06em}.fgrid h4.lg{margin-top:26px}
+.fgrid li{margin-bottom:10px}.fgrid li a{display:inline-block;transition:color .2s,transform .25s var(--ease)}.fgrid li a:hover{color:#fff;transform:translateX(4px)}
+.fgrid p{max-width:420px;line-height:1.7}
+.wordmark{display:inline-flex;align-items:center;gap:12px;font:800 32px var(--fd);letter-spacing:.03em;margin-bottom:16px}.wordmark span{color:#fff}.wordmark b{color:var(--vio)}
+.wordmark .logo-mark{width:40px;height:40px}
+.social{display:flex;gap:10px;margin-top:26px}
+.social a{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;color:#ddd;transition:background .2s,color .2s,transform .3s var(--ease)}
+.social a:hover{background:#26284f;color:var(--vio);transform:translateY(-3px)}.social .ui{width:22px;height:22px}
+.fbot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px 24px;border-top:1px solid #26284f;padding:20px 0;font-size:13px;color:#9092ae}
+.fbot strong{color:#ddd;font-weight:600}.fbot a{transition:color .2s}.fbot a:hover{color:var(--vio)}
+
+/* floating buttons */
+.wa-float{position:fixed;right:24px;bottom:24px;z-index:150;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,#25d366,#128c7e);animation:waGlow 2.4s ease-in-out infinite,waBob 4s ease-in-out infinite;transition:transform .3s var(--ease)}
+.wa-float:hover{transform:scale(1.1)}.wa-float svg{width:28px;height:28px;fill:currentColor;stroke:none}
+.wa-float::before,.wa-float::after{content:"";position:absolute;inset:0;border-radius:50%;z-index:-1;pointer-events:none;background:rgba(37,211,102,.5);animation:waRing 2.4s cubic-bezier(.2,.6,.3,1) infinite}
+.wa-float::after{animation-delay:1.2s;background:rgba(37,211,102,.35)}
+@keyframes waRing{0%{transform:scale(1);opacity:.75}100%{transform:scale(2.2);opacity:0}}
+@keyframes waGlow{0%,100%{box-shadow:0 0 14px 2px rgba(37,211,102,.55),0 8px 24px rgba(37,211,102,.45)}50%{box-shadow:0 0 22px 6px rgba(37,211,102,.85),0 8px 24px rgba(37,211,102,.5)}}
+@keyframes waBob{50%{translate:0 -6px}}
+.totop{position:fixed;left:24px;bottom:24px;z-index:140;width:48px;height:48px;padding:0;border:0;border-radius:50%;background:#fff;color:var(--navy);display:grid;place-items:center;cursor:pointer;box-shadow:0 10px 26px rgba(20,21,46,.18);opacity:0;visibility:hidden;transform:translateY(16px) scale(.9);transition:opacity .35s,transform .35s var(--ease),visibility .35s,background .25s,color .25s}
+.totop.show{opacity:1;visibility:visible;transform:none}.totop:hover{background:var(--navy);color:#fff}
+.totop .ring{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg)}
+.totop .trk{fill:none;stroke:var(--line);stroke-width:2.5}.totop .prg{fill:none;stroke:var(--ind);stroke-width:2.5;stroke-linecap:round;stroke-dasharray:138.23;stroke-dashoffset:138.23}
+.totop .ui{position:relative;width:18px;height:18px}
+
+/* scroll reveal */
+.rv{opacity:0;transform:translateY(40px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}
+.rv.fl{transform:translateX(-50px)}.rv.fr{transform:translateX(50px)}
+.rv.in{opacity:1!important;transform:none!important}
+
+/* responsive */
+@media(max-width:1000px){
+ .layout{grid-template-columns:minmax(0,1fr);gap:28px}
+ .toc{position:static;max-height:none;padding:18px 14px}
+ .toc nav{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}.toc nav::-webkit-scrollbar{display:none}
+ .toc a{flex:none;border-left:0;border-radius:99px;padding:9px 14px;background:rgba(255,255,255,.08);white-space:nowrap}
+ .toc a:hover{transform:none}
+ .orbit{display:none}
+ .fgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.fgrid>div:first-child{grid-column:1/-1}
+}
+@media(max-width:820px){
+ .menu-toggle{display:inline-flex;align-items:center;justify-content:center}
+ .nav-inner{height:56px;padding-inline:18px}
+ #navWrap{position:absolute;top:56px;left:0;right:0;background:#0e0f2a;border-bottom:1px solid rgba(143,132,242,.28);max-height:calc(100dvh - 56px);overflow:auto;visibility:hidden;opacity:0;transform:translateY(-8px);transition:opacity .25s,transform .3s var(--ease),visibility .25s}
+ #navWrap.open{visibility:visible;opacity:1;transform:none}
+ .nav-links{flex-direction:column;align-items:stretch;gap:0;padding:8px 20px 24px}
+ .nav-links>li{border-bottom:1px solid rgba(255,255,255,.12)}
+ .nav-links>li>a,.dd-btn{display:block;width:100%;text-align:left;font-size:17px;padding:15px 0}
+ .nav-links>li>a::after,.dd-btn::after{display:none}
+ .dd{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:0;background:none;display:none;padding:2px 0 14px}
+ .has-dd.open .dd{display:block}
+ .dd a{display:flex;align-items:center;min-height:48px;margin:0 0 10px;padding:0 18px;border-radius:14px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);color:#fff;font:600 15.5px/1.2 'Open Sans',sans-serif}
+ .dd a:hover{background:rgba(255,255,255,.14);border-color:var(--vio);padding-left:18px}
+ .dd a:active{background:var(--ind);border-color:var(--ind)}
+ .nav-links>li{animation:none}
+}
+@media(max-width:760px){
+ .qgrid,.bgrid,.bgrid.g3,.cgrid{grid-template-columns:minmax(0,1fr)}
+ .band .loc{grid-template-columns:minmax(0,1fr)}
+}
+@media(max-width:700px){
+ body{font-size:15.5px}
+ .wrap{padding:0 20px}
+ .hero{min-height:0}.hero-grid{padding:36px 20px 70px}
+ .btn{min-width:0;height:50px}
+ .qs{margin-top:-36px}
+ .ps{padding:22px 18px;border-radius:20px}
+ .ps-h{gap:10px}.sn{min-width:36px;height:36px}
+ .fgrid{grid-template-columns:1fr 1fr;gap:26px 18px;padding-bottom:28px}
+ .fbot{flex-direction:column;align-items:center;text-align:center}
+ .wa-float{right:16px;bottom:16px;width:52px;height:52px}
+ .totop{left:16px;bottom:16px;width:44px;height:44px}
+ .rv:not(.fl):not(.fr){transform:translateY(28px)}.rv.fl{transform:translateX(-32px)}.rv.fr{transform:translateX(32px)}
+ .hero::after{display:none}
+ .site-footer{padding-bottom:20px}
+}
+@media(max-width:380px){.logo-text{font-size:15px}.hero h1{font-size:1.85rem}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01s!important;transition-duration:.01s!important}html{scroll-behavior:auto}.rv{opacity:1;transform:none}.wa-float::before,.wa-float::after{display:none}}
+
+/* Privacy page refinements: compact brand-only header + homepage-style split hero */
+.site-header .nav-inner{height:72px;justify-content:flex-start;padding-inline:clamp(20px,5vw,88px)}
+.site-header .logo-mark{width:36px;height:36px}
+.site-header .logo-text{font-size:20px}
+.hero{min-height:clamp(500px,72vh,620px);display:flex;align-items:center}
+.hero-bg{position:absolute;top:0;right:0;z-index:-1;width:min(66%,980px);height:100%;object-fit:cover;object-position:left center;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 30%);mask-image:linear-gradient(90deg,transparent 0,#000 30%)}
+.hero-grid{width:100%;padding:clamp(40px,6vw,72px) clamp(24px,5vw,88px)}
+.hero-copy{max-width:560px}
+@keyframes privacyImgIn{from{opacity:0;transform:translateX(48px) scale(1.03)}}
+@keyframes privacyImgInMobile{from{opacity:0;transform:translateY(-24px) scale(.985)}}
+.hero-bg{animation:privacyImgIn 1.4s var(--ease) .2s both}
+@media(max-width:1000px){
+ .hero{flex-direction:column;align-items:stretch;min-height:0}
+ .hero-bg{position:relative;right:auto;top:auto;z-index:0;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:center;-webkit-mask-image:none;mask-image:none;animation:privacyImgInMobile 1s var(--ease) .12s both}
+ .hero-grid{padding:42px 24px 52px}
+ .hero-copy{max-width:680px}
+ .orbit{display:none}
+}
+@media(max-width:700px){
+ .site-header .nav-inner{height:64px;padding-inline:20px}
+ .site-header .logo-mark{width:32px;height:32px}
+ .site-header .logo-text{font-size:18px}
+ .hero-grid{padding:34px 20px 46px}
+ .hero-bg{aspect-ratio:16/10}
+}
+@media(prefers-reduced-motion:reduce){.hero-bg{animation:none}.hv:hover{transform:none}}
+
+/* Match the homepage's cursor-responsive card tilt and lift. */
+.hv{--rx:0deg;--ry:0deg;transform-style:preserve-3d}
+.hv.tilting{transition:transform .12s linear,box-shadow .4s,border-color .3s}
+@media(hover:hover){.hv:hover{transform:perspective(1000px) rotateX(var(--rx)) rotateY(var(--ry)) translateY(-6px);box-shadow:0 28px 56px rgba(91,75,232,.22),inset 0 1px 0 #fff}}
+
+/* ===== Top navigation (same as the other pages) ===== */
+:root{--fb:'Open Sans',system-ui,sans-serif}
+.site-header .nav-inner{height:52px;justify-content:space-between;padding-inline:clamp(20px,5vw,88px)}
+.site-header .logo-mark{width:30px;height:30px}
+.site-header .logo-text{font-size:17px}
+.nav-links{display:flex;align-items:center;gap:24px;list-style:none;font:500 14px var(--fb)}
+.nav-links>li>a,.dd-btn{position:relative;color:#c9cae9;padding:4px 0;transition:color .2s;font:500 14px var(--fb);text-decoration:none}
+.nav-links>li>a::after,.dd-btn::after{content:"";position:absolute;left:0;right:0;bottom:1px;height:2px;background:var(--vio);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
+.nav-links>li>a:hover,.dd-btn:hover,.has-dd:hover .dd-btn,.has-dd.open .dd-btn,.nav-links a.active{color:#fff}
+.nav-links>li>a:hover::after,.dd-btn:hover::after,.nav-links a.active::after{transform:scaleX(1)}
+.nav-links a.active{font-weight:700}.nav-links a.active::after{background:var(--peri)}
+.dd-btn{background:none;border:0;cursor:pointer}.has-dd{position:relative}
+.dd{position:absolute;top:100%;left:-14px;min-width:230px;background:rgba(255,255,255,.95);border:1px solid var(--line);box-shadow:0 14px 32px rgba(20,21,46,.1);padding:8px 0;border-radius:16px;opacity:0;visibility:hidden;transform:translateY(6px);transition:.2s}
+.has-dd:hover .dd,.has-dd.open .dd{opacity:1;visibility:visible;transform:none}
+.dd a{display:block;padding:10px 18px;font:400 14px/1.65 var(--fb);color:var(--ink);text-decoration:none;transition:background .25s,color .25s,padding-left .25s var(--ease)}
+.dd a:hover{background:var(--navy);color:#fff;padding-left:24px}
+.tri{display:inline-block;width:0;height:0;margin-left:8px;vertical-align:middle;border-left:4px solid transparent;border-right:4px solid transparent;border-top:5px solid currentColor;transition:transform .25s var(--ease)}
+.has-dd:hover>.dd-btn .tri,.has-dd.open>.dd-btn .tri{transform:rotate(180deg)}
+.menu-toggle{display:none;align-items:center;justify-content:center;background:none;border:1px solid rgba(255,255,255,.3);color:#fff;border-radius:12px;width:40px;height:40px;font-size:18px;cursor:pointer}
+@media(max-width:820px){
+ .site-header .nav-inner{height:56px;padding-inline:18px}.menu-toggle{display:inline-flex}
+ #navWrap{position:absolute;top:56px;left:0;right:0;background:var(--navy);border-bottom:1px solid rgba(143,132,242,.28);display:block;max-height:calc(100dvh - 56px);overflow:auto;visibility:hidden;opacity:0;transform:translateY(-8px);transition:opacity .25s,transform .3s var(--ease),visibility .25s}
+ #navWrap.open{visibility:visible;opacity:1;transform:none}
+ .nav-links{flex-direction:column;align-items:stretch;gap:0;padding:8px 20px 24px}.nav-links>li{border-bottom:1px solid rgba(255,255,255,.12)}.nav-links>li:last-child{border:0}
+ .nav-links>li>a,.dd-btn{display:block;width:100%;text-align:left;font-size:17px;padding:15px 0}.nav-links>li>a::after,.dd-btn::after{display:none}
+ .dd{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:0;display:none;padding:0 0 10px 14px;background:none;border-radius:0}.has-dd.open .dd{display:block}
+ .dd a{color:#c9cae9;font-size:15.5px;padding:12px 0}.dd a:hover{background:rgba(255,255,255,.08);color:#fff;padding-left:0}
+}
+@media(max-width:380px){.site-header .logo-text{font-size:15px}}
+
+/* ===== Get Started button (top bar) ===== */
+.cta-btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 22px;border-radius:999px;font:700 15px/1 var(--fd,'Poppins','Open Sans',system-ui,sans-serif);letter-spacing:.02em;color:#fff;text-decoration:none;white-space:nowrap;overflow:hidden;background:linear-gradient(135deg,#5b4be8,#8f84f2 60%,#82c8eb);background-size:180% 100%;background-position:0 0;border:1px solid rgba(255,255,255,.28);box-shadow:0 8px 22px -8px rgba(91,75,232,.9),inset 0 1px 0 rgba(255,255,255,.35);transition:transform .25s var(--ease,ease),box-shadow .25s,background-position .5s}
+.cta-btn::before{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);animation:ctaShine 3.8s ease-in-out infinite;pointer-events:none}
+.cta-btn svg{width:15px;height:15px;flex:none;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;transition:transform .25s var(--ease,ease)}
+.nav-links>li>a.cta-btn,.links>a.cta-btn{color:#fff;padding:10px 22px;font:700 15px/1 var(--fd,'Poppins','Open Sans',system-ui,sans-serif);letter-spacing:.02em}
+.nav-links>li>a.cta-btn::after,.links>a.cta-btn::after{display:none}
+.nav-links>li.nav-cta{margin-left:6px}.links>a.cta-btn{margin-left:6px}
+.cta-btn:hover,.nav-links>li>a.cta-btn:hover,.links>a.cta-btn:hover{color:#fff;letter-spacing:.02em;transform:translateY(-2px);background-position:100% 0;box-shadow:0 14px 28px -8px rgba(91,75,232,1),0 0 0 4px rgba(143,132,242,.28),inset 0 1px 0 rgba(255,255,255,.45)}
+.cta-btn:hover svg{transform:translateX(4px)}
+.cta-btn:active,.links>a.cta-btn:active{transform:translateY(0) scale(.97)}
+.cta-btn:focus-visible{outline:2px solid #fff;outline-offset:3px}
+@keyframes ctaShine{0%,55%{left:-60%}100%{left:130%}}
+.nav-right{display:flex;align-items:center;gap:12px;flex:none}
+@media(max-width:820px){
+ .nav-links>li.nav-cta{margin-left:0;border-bottom:0;padding-top:18px}
+ .nav-links>li>a.cta-btn,.links>a.cta-btn{display:flex;width:100%;margin:14px 0 0;padding:15px 20px;font-size:17px;text-align:center;border:1px solid rgba(255,255,255,.28)}
+ .nav-links>li.nav-cta>a.cta-btn{margin:0}
+}
+@media(max-width:560px){
+ .nav-right .cta-btn{padding:8px 15px;font-size:13.5px}
+ .site-header .nav-right .nav-back>span:last-child{display:none}.site-header .nav-right .nav-back{padding:3px}
+}
+@media(prefers-reduced-motion:reduce){.cta-btn::before{animation:none}.cta-btn,.cta-btn svg{transition:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+ <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+ <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></symbol>
+ <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6M16 4.5a3.5 3.5 0 0 1 0 7M18 14.2c2 .7 3.5 2.6 3.5 5.8"/></symbol>
+ <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+ <symbol id="i-building" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2M10 21v-3h4v3"/></symbol>
+ <symbol id="i-card" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></symbol>
+ <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+ <symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16v4zM13.5 6.5l4 4"/></symbol>
+ <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13M10 11v6M14 11v6"/></symbol>
+ <symbol id="i-ban" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></symbol>
+ <symbol id="i-swap" viewBox="0 0 24 24"><path d="M4 8h15l-4-4M20 16H5l4 4"/></symbol>
+ <symbol id="i-hand" viewBox="0 0 24 24"><path d="M8 12V5a1.5 1.5 0 0 1 3 0v6M11 11V3.5a1.5 1.5 0 0 1 3 0V11M14 11V5.5a1.5 1.5 0 0 1 3 0V14c0 4-2.5 7-6 7-3 0-4.5-2-6-5l-1.5-3a1.5 1.5 0 0 1 2.4-1.7L8 14"/></symbol>
+ <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 17V11a6 6 0 0 1 12 0v6l2 2H4zM10 21h4"/></symbol>
+ <symbol id="i-server" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01"/></symbol>
+ <symbol id="i-cog" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></symbol>
+ <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></symbol>
+ <symbol id="i-mega" viewBox="0 0 24 24"><path d="M3 10v4l11 5V5L3 10zM14 8c3 0 5 1.8 5 4s-2 4-5 4M6 14l1 6h3l-1-5"/></symbol>
+ <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h2M10 17h10M14 4v6M6 14v6"/></symbol>
+ <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></symbol>
+ <symbol id="i-child" viewBox="0 0 24 24"><circle cx="12" cy="7" r="3"/><path d="M6 21v-5a6 6 0 0 1 12 0v5M9 21v-3M15 21v-3"/></symbol>
+ <symbol id="i-headset" viewBox="0 0 24 24"><path d="M4 14v-2a8 8 0 0 1 16 0v2M4 14h3v5H5a1 1 0 0 1-1-1zM20 14h-3v5h2a1 1 0 0 0 1-1z"/></symbol>
+ <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+ <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 3v18M6 21h12M5 7h14M5 7l-3 7a3.5 3.5 0 0 0 6 0L5 7zM19 7l-3 7a3.5 3.5 0 0 0 6 0l-3-7z"/></symbol>
+ <symbol id="i-warn" viewBox="0 0 24 24"><path d="M12 3l10 18H2L12 3zM12 10v5M12 18v.01"/></symbol>
+ <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></symbol>
+ <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.01"/></symbol>
+ <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></symbol>
+ <symbol id="i-list" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></symbol>
+ <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+ <symbol id="i-handshake" viewBox="0 0 24 24"><path d="M2 12l5-5 4 2 4-2 5 5M7 7l5 6M2 12l5 5 3-1 2 2 3-1 5-5M10 16l-2-2"/></symbol>
+ <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
+ <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.2 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></symbol>
+ <symbol id="i-linkedin" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V16M8 7.5v.01M12 16v-5.5M12 13c0-1.5 1-2.6 2.5-2.6S17 11.4 17 13v3"/></symbol>
+ <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5v.01"/></symbol>
+ <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
+</svg>
+
+<div id="bar"></div>
+
+<header class="site-header">
+ <div class="nav-inner">
+  <a href="/home" class="site-logo" aria-label="ALGO ORBIT home">
+   <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10"/><line x1="13.5" y1="28" x2="21.5" y2="12.5"/><circle cx="30" cy="27.5" r="5"/></svg>
+   <span class="logo-text"><b>ALGO</b><span>ORBIT</span></span>
+  </a>
+  <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation" aria-controls="navWrap" aria-expanded="false">☰</button>
+  <nav id="navWrap" aria-label="Primary">
+   <ul class="nav-links">
+    <li><a href="/home">Home</a></li>
+    <li><a href="/about">About</a></li>
+    <li class="has-dd"><button class="dd-btn" type="button" aria-expanded="false">Services<i class="tri" aria-hidden="true"></i></button>
+     <div class="dd"><a href="/consultancy">IT Consultancy</a>
+      <a href="/training">Training</a>
+      <a href="/products">Products</a></div></li>
+    <li><a href="/our-work">Our Work</a></li>
+    <li><a href="/careers">Careers</a></li>
+    <li><a href="/contact">Contact</a></li>
+   <li class="nav-cta"><a href="/contact" class="cta-btn"><span>Get Started</span></a></li></ul>
+  </nav>
+ </div>
+</header>
+
+<main id="main">
+
+<!-- Hero -->
+<section class="hero">
+ <div class="orbit" aria-hidden="true"><svg viewBox="0 0 600 600"><circle cx="300" cy="300" r="290"/><circle class="d2" cx="300" cy="300" r="215"/><circle cx="300" cy="300" r="140"/><g class="o1"><circle class="dot" cx="300" cy="10" r="7"/></g><g class="o2"><circle class="dot" cx="515" cy="300" r="5"/></g><g class="o3"><circle class="dot" cx="300" cy="440" r="4"/></g></svg></div>
+ <img class="hero-bg" src="{{ url_for('static', filename='assets/images/privacy.png') }}" alt="Digital privacy and cybersecurity concept with a secure padlock" width="1800" height="1200" fetchpriority="high">
+ <div class="hero-grid">
+  <div class="hero-copy">
+   <div class="sbadge"><svg class="ui"><use href="#i-shield"/></svg>Your Privacy Matters</div>
+   <h1>Privacy <em>Policy</em></h1>
+   <p class="lead">We are committed to protecting your privacy and ensuring the security of your personal information. Learn how we collect, use, and safeguard your data.</p>
+   <div class="upd"><svg class="ui"><use href="#i-cal"/></svg><span>Last Updated: <strong>February 6, 2026</strong></span></div>
+  </div>
+ </div>
+</section>
+
+<!-- Quick stats -->
+<section class="qs" aria-label="Privacy highlights">
+ <div class="wrap">
+  <div class="qgrid">
+   <div class="qcard hv rv"><span class="ic"><svg class="ui"><use href="#i-lock"/></svg></span><h3>Data Encryption</h3><p>256-bit SSL/TLS encryption for all data transfers</p></div>
+   <div class="qcard hv rv"><span class="ic b3"><svg class="ui"><use href="#i-shield"/></svg></span><h3>GDPR Compliant</h3><p>Full compliance with international privacy laws</p></div>
+   <div class="qcard hv rv"><span class="ic b4"><svg class="ui"><use href="#i-hand"/></svg></span><h3>Your Control</h3><p>Complete control over your personal data</p></div>
+  </div>
+ </div>
+</section>
+
+<!-- Main content -->
+<section class="main">
+ <div class="wrap layout">
+
+  <!-- TOC -->
+  <aside class="toc" aria-label="Table of contents">
+   <h3><svg class="ui"><use href="#i-list"/></svg>Contents</h3>
+   <div class="toc-prog"><i id="tocFill"></i></div>
+   <nav>
+    <a href="#introduction"><b>01</b>Introduction</a>
+    <a href="#information-we-collect"><b>02</b>Information We Collect</a>
+    <a href="#how-we-use"><b>03</b>How We Use Data</a>
+    <a href="#data-sharing"><b>04</b>Data Sharing</a>
+    <a href="#data-security"><b>05</b>Data Security</a>
+    <a href="#your-rights"><b>06</b>Your Rights</a>
+    <a href="#cookies"><b>07</b>Cookies &amp; Tracking</a>
+    <a href="#international"><b>08</b>International Transfers</a>
+    <a href="#children"><b>09</b>Children's Privacy</a>
+    <a href="#retention"><b>10</b>Data Retention</a>
+    <a href="#changes"><b>11</b>Policy Changes</a>
+    <a href="#contact"><b>12</b>Contact Us</a>
+   </nav>
+  </aside>
+
+  <div class="stack">
+
+   <!-- 1 Introduction -->
+   <article id="introduction" class="ps rv fr">
+    <div class="ps-h"><span class="sn">01</span><h2>Introduction</h2></div>
+    <p>Welcome to Algo Orbit Innovations Pvt. Ltd. ("Algo Orbit," "we," "us," or "our"). We respect your privacy and are committed to protecting your personal data. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, use our services, or interact with us.</p>
+    <p>By accessing or using our services, you acknowledge that you have read, understood, and agree to be bound by this Privacy Policy. If you do not agree with our policies and practices, please do not use our services.</p>
+    <div class="hl"><svg class="ui"><use href="#i-info"/></svg><span>This policy applies to all information collected through our website, mobile applications, and any related services, sales, marketing, or events.</span></div>
+   </article>
+
+   <!-- 2 Information We Collect -->
+   <article id="information-we-collect" class="ps rv fr">
+    <div class="ps-h"><span class="sn">02</span><h2>Information We Collect</h2></div>
+
+    <h3 class="sh">2.1 Personal Information</h3>
+    <p>We may collect personal information that you voluntarily provide to us when you:</p>
+    <ul class="cl">
+     <li>Register for an account or use our services</li>
+     <li>Subscribe to our newsletter or marketing communications</li>
+     <li>Contact us through forms, email, or phone</li>
+     <li>Participate in surveys, contests, or promotions</li>
+     <li>Apply for job positions or internships</li>
+     <li>Attend our training programs or events</li>
+    </ul>
+    <p>This may include:</p>
+    <div class="bgrid">
+     <div class="bx hv"><h4><svg class="ui"><use href="#i-user"/></svg>Identity Information</h4><p>Name, username, date of birth, gender</p></div>
+     <div class="bx hv"><h4><svg class="ui"><use href="#i-mail"/></svg>Contact Information</h4><p>Email address, phone number, mailing address</p></div>
+     <div class="bx hv"><h4><svg class="ui"><use href="#i-building"/></svg>Professional Information</h4><p>Company name, job title, industry</p></div>
+     <div class="bx hv"><h4><svg class="ui"><use href="#i-card"/></svg>Financial Information</h4><p>Payment details, billing address</p></div>
+    </div>
+
+    <h3 class="sh s2">2.2 Automatically Collected Information</h3>
+    <p>When you access our services, we automatically collect certain information about your device and usage:</p>
+    <ul class="cl">
+     <li><strong>Technical Data:</strong> IP address, browser type and version, time zone, operating system, device type</li>
+     <li><strong>Usage Data:</strong> Pages visited, time spent on pages, click patterns, navigation paths</li>
+     <li><strong>Location Data:</strong> Approximate geographic location based on IP address</li>
+     <li><strong>Cookies &amp; Similar Technologies:</strong> Information collected through cookies, web beacons, and similar tracking technologies</li>
+    </ul>
+
+    <h3 class="sh s3">2.3 Information from Third Parties</h3>
+    <p>We may receive information about you from third-party sources, including:</p>
+    <ul class="cl">
+     <li>Social media platforms (LinkedIn, Facebook, Twitter) when you connect your account</li>
+     <li>Analytics providers (Google Analytics, Mixpanel)</li>
+     <li>Marketing and advertising partners</li>
+     <li>Publicly available databases and information</li>
+    </ul>
+   </article>
+
+   <!-- 3 How We Use -->
+   <article id="how-we-use" class="ps rv fr">
+    <div class="ps-h"><span class="sn">03</span><h2>How We Use Your Information</h2></div>
+    <p>We use your personal information for legitimate business purposes, including:</p>
+    <div class="tl">
+     <div class="ti"><h3>Service Delivery &amp; Support</h3>
+      <ul class="cl sm"><li>Provide, maintain, and improve our IT consultancy and training services</li><li>Process transactions and send related information</li><li>Respond to your inquiries and provide customer support</li><li>Deliver personalized content and recommendations</li></ul></div>
+     <div class="ti"><h3>Communication &amp; Marketing</h3>
+      <ul class="cl sm"><li>Send you technical notices, updates, and security alerts</li><li>Provide newsletters, marketing materials, and promotional offers (with your consent)</li><li>Conduct surveys and gather feedback</li><li>Communicate about events, webinars, and training programs</li></ul></div>
+     <div class="ti"><h3>Analytics &amp; Improvement</h3>
+      <ul class="cl sm"><li>Analyze usage patterns and trends to improve our services</li><li>Monitor and analyze website performance and user experience</li><li>Develop new products, services, and features</li><li>Test and optimize our marketing campaigns</li></ul></div>
+     <div class="ti"><h3>Security &amp; Compliance</h3>
+      <ul class="cl sm"><li>Detect, prevent, and address technical issues and security threats</li><li>Protect against fraud, abuse, and unauthorized access</li><li>Comply with legal obligations and enforce our terms and policies</li><li>Maintain records for auditing and compliance purposes</li></ul></div>
+     <div class="ti"><h3>Recruitment &amp; HR</h3>
+      <ul class="cl sm"><li>Process job applications and evaluate candidates</li><li>Conduct background checks (where permitted by law)</li><li>Manage internship and training programs</li><li>Maintain employee and contractor records</li></ul></div>
+    </div>
+    <div class="hl"><svg class="ui"><use href="#i-scale"/></svg><span><strong>Legal Basis:</strong> We process your data based on consent, contractual necessity, legitimate interests, and legal obligations as permitted under GDPR and applicable privacy laws.</span></div>
+   </article>
+
+   <!-- 4 Data Sharing -->
+   <article id="data-sharing" class="ps rv fr">
+    <div class="ps-h"><span class="sn">04</span><h2>Data Sharing and Disclosure</h2></div>
+    <p>We do not sell your personal information. We may share your information with third parties only in the following circumstances:</p>
+    <div class="stk">
+     <div class="bx hv"><h4><svg class="ui"><use href="#i-handshake"/></svg>Service Providers</h4>
+      <p style="margin-bottom:10px">We engage trusted third-party vendors who perform services on our behalf:</p>
+      <ul class="cl sm" style="margin:0"><li>Cloud hosting providers (AWS, Google Cloud, Azure)</li><li>Payment processors (Stripe, PayPal, Razorpay)</li><li>Email service providers (SendGrid, Mailchimp)</li><li>Analytics and advertising partners (Google Analytics, LinkedIn)</li><li>Customer support platforms (Zendesk, Intercom)</li></ul></div>
+     <div class="bx hv"><h4><svg class="ui"><use href="#i-building"/></svg>Business Transfers</h4><p>If we are involved in a merger, acquisition, financing, reorganization, bankruptcy, or sale of assets, your information may be transferred as part of that transaction. We will provide notice before your data is transferred and becomes subject to a different privacy policy.</p></div>
+     <div class="bx hv"><h4><svg class="ui"><use href="#i-scale"/></svg>Legal Requirements</h4><p>We may disclose your information if required by law or in response to valid requests by public authorities (e.g., court orders, government regulations, law enforcement), or to protect our rights, safety, or property.</p></div>
+     <div class="bx hv"><h4><svg class="ui"><use href="#i-check"/></svg>With Your Consent</h4><p>We may share your information with third parties when you have given us explicit consent to do so for a specific purpose.</p></div>
+    </div>
+    <div class="hl"><svg class="ui"><use href="#i-shield"/></svg><span>All third-party service providers are contractually required to maintain the confidentiality and security of your personal information and are prohibited from using it for any purpose other than providing services to us.</span></div>
+   </article>
+
+   <!-- 5 Data Security -->
+   <article id="data-security" class="ps rv fr">
+    <div class="ps-h"><span class="sn">05</span><h2>Data Security</h2></div>
+    <p>We implement robust technical and organizational security measures to protect your personal information from unauthorized access, disclosure, alteration, and destruction:</p>
+    <div class="bgrid">
+     <div class="fc fc1 hv"><span class="ic"><svg class="ui"><use href="#i-lock"/></svg></span><h3>Encryption</h3><ul class="cl sm" style="margin:0"><li>256-bit SSL/TLS encryption for data in transit</li><li>AES-256 encryption for data at rest</li><li>End-to-end encryption for sensitive communications</li></ul></div>
+     <div class="fc fc2 hv"><span class="ic b3"><svg class="ui"><use href="#i-user"/></svg></span><h3>Access Controls</h3><ul class="cl sm" style="margin:0"><li>Multi-factor authentication (MFA)</li><li>Role-based access control (RBAC)</li><li>Regular access reviews and audits</li></ul></div>
+     <div class="fc fc3 hv"><span class="ic b4"><svg class="ui"><use href="#i-server"/></svg></span><h3>Infrastructure Security</h3><ul class="cl sm" style="margin:0"><li>Secure cloud hosting with enterprise-grade providers</li><li>Regular security patches and updates</li><li>Intrusion detection and prevention systems</li></ul></div>
+     <div class="fc fc4 hv"><span class="ic b5"><svg class="ui"><use href="#i-eye"/></svg></span><h3>Monitoring &amp; Response</h3><ul class="cl sm" style="margin:0"><li>24/7 security monitoring and logging</li><li>Incident response procedures</li><li>Regular security assessments and penetration testing</li></ul></div>
+    </div>
+    <div class="hl w"><svg class="ui"><use href="#i-warn"/></svg><span><strong>Important:</strong> While we strive to protect your personal information, no method of transmission over the internet or electronic storage is 100% secure. We cannot guarantee absolute security but continuously work to maintain and improve our security measures.</span></div>
+    <div class="bx hv" style="margin-top:20px"><h4><svg class="ui"><use href="#i-bell"/></svg>Data Breach Notification</h4><p>In the event of a data breach that affects your personal information, we will notify you and relevant authorities within 72 hours as required by GDPR and applicable laws, and take immediate steps to remediate the breach.</p></div>
+   </article>
+
+   <!-- 6 Your Rights -->
+   <article id="your-rights" class="ps rv fr">
+    <div class="ps-h"><span class="sn">06</span><h2>Your Rights and Choices</h2></div>
+    <p>Depending on your location and applicable law, you have the following rights regarding your personal information:</p>
+    <div class="stk">
+     <div class="rt c1 hv"><span class="ic"><svg class="ui"><use href="#i-eye"/></svg></span><div><h3>Right to Access</h3><p>You can request a copy of the personal information we hold about you, along with information about how we use it.</p></div></div>
+     <div class="rt c2 hv"><span class="ic b3"><svg class="ui"><use href="#i-edit"/></svg></span><div><h3>Right to Rectification</h3><p>You can request that we correct any inaccurate or incomplete personal information we hold about you.</p></div></div>
+     <div class="rt c3 hv"><span class="ic" style="background:linear-gradient(135deg,#ef5a6f,#f08a3c)"><svg class="ui"><use href="#i-trash"/></svg></span><div><h3>Right to Erasure (Right to be Forgotten)</h3><p>You can request deletion of your personal information in certain circumstances, such as when it's no longer necessary for the purposes it was collected.</p></div></div>
+     <div class="rt c4 hv"><span class="ic" style="background:linear-gradient(135deg,#f0a91c,#f08a3c)"><svg class="ui"><use href="#i-ban"/></svg></span><div><h3>Right to Restrict Processing</h3><p>You can request that we limit how we use your personal information in certain situations.</p></div></div>
+     <div class="rt c7 hv"><span class="ic" style="background:linear-gradient(135deg,#14a89a,#2fa7e0)"><svg class="ui"><use href="#i-swap"/></svg></span><div><h3>Right to Data Portability</h3><p>You can request to receive your personal information in a structured, commonly used, and machine-readable format, and have it transferred to another service provider.</p></div></div>
+     <div class="rt c6 hv"><span class="ic b5"><svg class="ui"><use href="#i-hand"/></svg></span><div><h3>Right to Object</h3><p>You can object to processing of your personal information for direct marketing purposes or where we rely on legitimate interests as our legal basis.</p></div></div>
+     <div class="rt c5 hv"><span class="ic b4"><svg class="ui"><use href="#i-user"/></svg></span><div><h3>Right to Withdraw Consent</h3><p>Where we process your data based on consent, you have the right to withdraw that consent at any time.</p></div></div>
+    </div>
+    <div class="band">
+     <h3><svg class="ui"><use href="#i-mail"/></svg>How to Exercise Your Rights</h3>
+     <p>To exercise any of these rights, please contact us using the information provided in the "Contact Us" section. We will respond to your request within 30 days.</p>
+     <p style="margin-bottom:0">You also have the right to lodge a complaint with a supervisory authority if you believe we have not complied with applicable data protection laws.</p>
+    </div>
+   </article>
+
+   <!-- 7 Cookies -->
+   <article id="cookies" class="ps rv fr">
+    <div class="ps-h"><span class="sn">07</span><h2>Cookies and Tracking Technologies</h2></div>
+    <p>We use cookies and similar tracking technologies to enhance your experience, analyze usage patterns, and deliver personalized content.</p>
+    <h3 class="sh">Types of Cookies We Use</h3>
+    <div class="stk">
+     <div class="bx hv"><h4><svg class="ui"><use href="#i-cog"/></svg>Essential Cookies</h4><p>Required for basic website functionality, such as page navigation, secure login, and form submission. These cannot be disabled.</p></div>
+     <div class="bx hv"><h4><svg class="ui"><use href="#i-chart"/></svg>Analytics Cookies</h4><p>Help us understand how visitors interact with our website by collecting and reporting information anonymously (e.g., Google Analytics).</p></div>
+     <div class="bx hv"><h4><svg class="ui"><use href="#i-mega"/></svg>Marketing Cookies</h4><p>Track your visits across websites to deliver relevant advertisements and measure campaign effectiveness (e.g., Facebook Pixel, LinkedIn Insight Tag).</p></div>
+     <div class="bx hv"><h4><svg class="ui"><use href="#i-sliders"/></svg>Preference Cookies</h4><p>Remember your preferences and settings (e.g., language, region) to provide a more personalized experience.</p></div>
+    </div>
+    <h3 class="sh s2">Managing Cookies</h3>
+    <p>You can control and manage cookies in several ways:</p>
+    <ul class="cl">
+     <li><strong>Browser Settings:</strong> Most browsers allow you to block or delete cookies through their settings</li>
+     <li><strong>Cookie Consent Tool:</strong> Use our cookie banner to customize your preferences when you first visit our site</li>
+     <li><strong>Opt-Out Tools:</strong> Use industry opt-out tools like the Network Advertising Initiative (NAI) or Digital Advertising Alliance (DAA)</li>
+     <li><strong>Do Not Track:</strong> Enable "Do Not Track" in your browser (though not all websites honor this signal)</li>
+    </ul>
+    <div class="hl"><svg class="ui"><use href="#i-info"/></svg><span>Note that blocking certain cookies may impact your ability to use some features of our website.</span></div>
+   </article>
+
+   <!-- 8 International -->
+   <article id="international" class="ps rv fr">
+    <div class="ps-h"><span class="sn">08</span><h2>International Data Transfers</h2></div>
+    <p>Your personal information may be transferred to, and processed in, countries other than the country in which you reside. These countries may have data protection laws that are different from the laws of your country.</p>
+    <p>We take appropriate safeguards to ensure that your personal information remains protected in accordance with this Privacy Policy when transferred internationally:</p>
+    <ul class="cl">
+     <li><strong>Standard Contractual Clauses:</strong> We use EU-approved Standard Contractual Clauses for transfers from the EEA</li>
+     <li><strong>Adequacy Decisions:</strong> We transfer data to countries recognized by the EU Commission as providing adequate protection</li>
+     <li><strong>Privacy Shield Framework:</strong> Where applicable, we comply with relevant privacy frameworks</li>
+     <li><strong>Additional Safeguards:</strong> We implement technical and organizational measures to protect data during transfer</li>
+    </ul>
+    <div class="band">
+     <h3><svg class="ui"><use href="#i-globe"/></svg>Current Processing Locations</h3>
+     <p>We primarily process data in the following regions:</p>
+     <div class="loc">
+      <div><svg class="ui"><use href="#i-globe"/></svg><b>India (Primary)</b></div>
+      <div><svg class="ui"><use href="#i-globe"/></svg><b>European Union</b></div>
+      <div><svg class="ui"><use href="#i-globe"/></svg><b>United States</b></div>
+     </div>
+    </div>
+   </article>
+
+   <!-- 9 Children -->
+   <article id="children" class="ps rv fr">
+    <div class="ps-h"><span class="sn">09</span><h2>Children's Privacy</h2></div>
+    <p>Our services are not directed to individuals under the age of 16. We do not knowingly collect personal information from children under 16 without parental consent.</p>
+    <p>If you are a parent or guardian and believe that your child has provided us with personal information, please contact us immediately. We will take steps to delete such information from our systems.</p>
+    <div class="hl"><svg class="ui"><use href="#i-child"/></svg><span>For our training and internship programs that may involve individuals aged 16-18, we require parental consent before collecting any personal information.</span></div>
+   </article>
+
+   <!-- 10 Retention -->
+   <article id="retention" class="ps rv fr">
+    <div class="ps-h"><span class="sn">10</span><h2>Data Retention</h2></div>
+    <p>We retain your personal information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law.</p>
+    <div class="bgrid">
+     <div class="bx hv"><h4><svg class="ui"><use href="#i-user"/></svg>Account Data</h4><p>Retained for the duration of your account plus 12 months after account closure (unless legal requirements dictate otherwise).</p></div>
+     <div class="bx hv"><h4><svg class="ui"><use href="#i-card"/></svg>Transaction Records</h4><p>Retained for 7 years to comply with tax and financial regulations.</p></div>
+     <div class="bx hv"><h4><svg class="ui"><use href="#i-mail"/></svg>Marketing Data</h4><p>Retained until you unsubscribe or request deletion, after which we retain minimal data to honor your opt-out.</p></div>
+     <div class="bx hv"><h4><svg class="ui"><use href="#i-chart"/></svg>Analytics Data</h4><p>Aggregated and anonymized data may be retained indefinitely for research and improvement purposes.</p></div>
+    </div>
+    <p style="font-size:14px">When personal information is no longer needed, we securely delete or anonymize it in accordance with industry best practices.</p>
+   </article>
+
+   <!-- 11 Changes -->
+   <article id="changes" class="ps rv fr">
+    <div class="ps-h"><span class="sn">11</span><h2>Changes to This Privacy Policy</h2></div>
+    <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. When we make material changes, we will:</p>
+    <ul class="cl">
+     <li>Update the "Last Updated" date at the top of this policy</li>
+     <li>Notify you via email or through a prominent notice on our website</li>
+     <li>Provide you with the opportunity to review the updated policy</li>
+     <li>In some cases, seek your consent for significant changes</li>
+    </ul>
+    <div class="hl w"><svg class="ui"><use href="#i-bell"/></svg><span>We encourage you to review this Privacy Policy periodically to stay informed about how we protect your information. Your continued use of our services after changes constitutes acceptance of the updated policy.</span></div>
+   </article>
+
+   <!-- 12 Contact -->
+   <article id="contact" class="ps rv fr">
+    <div class="ps-h"><span class="sn">12</span><h2>Contact Us</h2></div>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:</p>
+    <div class="cgrid">
+     <div class="cc hv"><div class="top"><span class="ic"><svg class="ui"><use href="#i-mail"/></svg></span><div><h3>Email</h3><small>General Privacy Inquiries</small></div></div><a class="lk" href="mailto:privacy@algoorbit.com">privacy@algoorbit.com</a></div>
+     <div class="cc hv"><div class="top"><span class="ic b3"><svg class="ui"><use href="#i-shield"/></svg></span><div><h3>Data Protection Officer</h3><small>For GDPR &amp; Compliance</small></div></div><a class="lk" href="mailto:dpo@algoorbit.com">dpo@algoorbit.com</a></div>
+     <div class="cc hv"><div class="top"><span class="ic b4"><svg class="ui"><use href="#i-pin"/></svg></span><div><h3>Mailing Address</h3><small>For Official Correspondence</small></div></div><address>Algo Orbit Innovations Pvt. Ltd.<br>Bangalore, Karnataka<br>India</address></div>
+     <div class="cc hv"><div class="top"><span class="ic b5"><svg class="ui"><use href="#i-headset"/></svg></span><div><h3>Support Portal</h3><small>Submit a Privacy Request</small></div></div><a class="lk" href="/contact">Visit Support Center</a></div>
+    </div>
+    <div class="band">
+     <h3><svg class="ui"><use href="#i-clock"/></svg>Response Time</h3>
+     <p style="margin-bottom:0">We aim to respond to all privacy-related inquiries within <strong>30 days</strong>. For urgent matters involving data breaches or security concerns, we will respond within <strong>72 hours</strong>.</p>
+    </div>
+   </article>
+
+  </div>
+ </div>
+</section>
+</main>
+
+<footer class="site-footer">
+ <div class="wrap">
+  <div class="fgrid">
+   <div>
+    <a href="/home" class="wordmark" aria-label="ALGO ORBIT home"><svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10"/><line x1="13.5" y1="28" x2="21.5" y2="12.5"/><circle cx="30" cy="27.5" r="5"/></svg><span>ALGO</span><b>ORBIT</b></a>
+    <p>We build software for businesses and teach practical tech skills. Our products range from restaurant management to civic engagement platforms.</p>
+    <div class="social">
+     <a href="https://www.linkedin.com/company/aionyxai/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="ui"><use href="#i-linkedin"/></svg></a>
+     <a href="https://www.instagram.com/algoorbit_official/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ui"><use href="#i-instagram"/></svg></a>
+     <a href="https://www.facebook.com/profile.php?id=61578724749065" target="_blank" rel="noopener" aria-label="Facebook"><svg class="ui"><use href="#i-facebook"/></svg></a>
+     <a href="https://whatsapp.com/channel/0029VbBktvfAYlUS6kToth1B" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="ui" style="fill:currentColor;stroke:none"><use href="#i-wa"/></svg></a>
+    </div>
+   </div>
+   <div><h4>Company</h4><ul><li><a href="/home">Home</a></li><li><a href="/about">About Us</a></li><li><a href="/careers">Careers</a></li><li><a href="/contact">Contact</a></li></ul></div>
+   <div><h4>Products</h4><ul><li><a href="/products#puredine">PureDine</a></li><li><a href="/products#trioncam">TrionCam</a></li><li><a href="/our-work">Our Work</a></li><li><a href="/contact">Request Demo</a></li></ul></div>
+   <div><h4>Services</h4><ul><li><a href="/consultancy">IT Consultancy</a></li><li><a href="/training">Training</a></li><li><a href="/training-institution">For Institutions</a></li><li><a href="/training-corporate">For Corporate</a></li><li><a href="/training-learner">For Learners</a></li></ul><h4 class="lg">Legal</h4><ul><li><a href="/privacy">Privacy Policy</a></li><li><a href="/terms">Terms of Service</a></li></ul></div>
+  </div>
+  <div class="fbot"><p>&copy; 2025 <strong>ALGOORBIT INNOVATIONS PRIVATE LIMITED</strong> All rights reserved.</p><a href="mailto:connect@algoorbit.in">connect@algoorbit.in</a></div>
+ </div>
+</footer>
+
+<button type="button" class="totop" id="totop" aria-label="Back to top"><svg class="ring" viewBox="0 0 48 48" aria-hidden="true"><circle class="trk" cx="24" cy="24" r="22"/><circle class="prg" cx="24" cy="24" r="22"/></svg><svg class="ui" aria-hidden="true"><use href="#i-up"/></svg></button>
+<a href="https://wa.me/919482119446" target="_blank" rel="noopener noreferrer" class="wa-float" aria-label="Chat with us on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg></a>
+
+<script>
+(function(){
+var $=function(s,r){return(r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+/* Brand-only header: navigation links and menu controls are intentionally omitted. */
+
+/* button ripple */
+document.addEventListener('click',function(e){var b=e.target.closest('.btn');if(!b)return;var r=b.getBoundingClientRect(),d=document.createElement('span');d.className='rp';d.style.left=(e.clientX-r.left)+'px';d.style.top=(e.clientY-r.top)+'px';b.appendChild(d);setTimeout(function(){d.remove()},750)});
+
+/* spotlight layer on cards */
+var SEL='.hv,.ps';
+$$('.hv').forEach(function(c){var i=document.createElement('i');i.className='spot';i.setAttribute('aria-hidden','true');c.appendChild(i)});
+var raf=0,tx=null,ex=0,ey=0;
+document.addEventListener('pointermove',function(e){if(e.pointerType==='touch')return;var t=e.target.closest&&e.target.closest('.hv');if(!t)return;tx=t;ex=e.clientX;ey=e.clientY;
+ if(!raf)raf=requestAnimationFrame(function(){raf=0;var r=tx.getBoundingClientRect();tx.style.setProperty('--mx',(ex-r.left)+'px');tx.style.setProperty('--my',(ey-r.top)+'px')})},{passive:true});
+document.addEventListener('pointerdown',function(e){if(e.pointerType!=='touch')return;var t=e.target.closest&&e.target.closest('.hv');if(!t)return;var r=t.getBoundingClientRect();
+ t.style.setProperty('--mx',(e.clientX-r.left)+'px');t.style.setProperty('--my',(e.clientY-r.top)+'px');t.classList.add('spot-on');clearTimeout(t._so);t._so=setTimeout(function(){t.classList.remove('spot-on')},1600)},{passive:true});
+
+/* homepage-style gentle 3D card tilt (desktop pointer devices only) */
+if(!reduce&&matchMedia('(hover:hover) and (pointer:fine)').matches){
+ $$('.hv').forEach(function(card){
+  card.addEventListener('pointermove',function(e){
+   var r=card.getBoundingClientRect(),px=(e.clientX-r.left)/r.width,py=(e.clientY-r.top)/r.height;
+   card.style.setProperty('--ry',((px-.5)*10).toFixed(2)+'deg');
+   card.style.setProperty('--rx',((.5-py)*8).toFixed(2)+'deg');
+   card.classList.add('tilting');
+  });
+  card.addEventListener('pointerleave',function(){
+   card.classList.remove('tilting');
+   card.style.setProperty('--rx','0deg');card.style.setProperty('--ry','0deg');
+  });
+ });
+}
+
+/* reversible scroll reveal: animate in and out as elements enter/leave view */
+var rv=$$('.rv');
+/* Alternate reveal directions for the policy cards and quick-highlight cards. */
+$$('.qcard.rv').forEach(function(card,i){
+ card.classList.remove('fl','fr');
+ card.classList.add(i%2===0?'fl':'fr');
+});
+$$('.ps.rv').forEach(function(card,i){
+ card.classList.remove('fl','fr');
+ card.classList.add(i%2===0?'fl':'fr');
+});
+if(reduce||!('IntersectionObserver' in window)){
+ rv.forEach(function(el){el.classList.add('in')});
+}else{
+ rv.forEach(function(el){
+  if(el.classList.contains('qcard')){
+   var cards=$$('.qcard');
+   el.style.transitionDelay=(cards.indexOf(el)*.12)+'s';
+  }
+ });
+ var io=new IntersectionObserver(function(entries){
+  entries.forEach(function(entry){
+   /* Removing .in on exit resets opacity/transform, so scrolling back
+      in either direction replays the same smooth reveal. */
+   entry.target.classList.toggle('in',entry.isIntersecting);
+  });
+ },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+ rv.forEach(function(el){io.observe(el)});
+}
+
+/* scroll progress, header, back-to-top ring, TOC progress */
+var totop=$('#totop'),prg=$('.prg',totop),bar=$('#bar'),hdr=$('.site-header'),tocFill=$('#tocFill'),run=false;
+function frame(){run=false;var sy=scrollY,h=innerHeight,dh=document.documentElement.scrollHeight-h,p=dh>0?sy/dh:0;
+ bar.style.width=(p*100)+'%';hdr.classList.toggle('scrolled',sy>40);
+ totop.classList.toggle('show',sy>h*.8);prg.style.strokeDashoffset=(138.23*(1-p)).toFixed(2);
+ if(tocFill)tocFill.style.width=(p*100)+'%'}
+function kick(){if(!run){run=true;requestAnimationFrame(frame)}}
+addEventListener('scroll',kick,{passive:true});addEventListener('resize',kick);addEventListener('load',kick);kick();
+totop.addEventListener('click',function(){scrollTo({top:0,behavior:reduce?'auto':'smooth'})});
+
+/* active TOC item */
+var links=$$('.toc a'),secs=$$('.ps');
+var tocIO=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var id=e.target.id;
+ links.forEach(function(a){var on=a.getAttribute('href')==='#'+id;a.classList.toggle('active',on);if(on&&innerWidth<=1000){var n=a.parentNode;n.scrollTo({left:a.offsetLeft-20,behavior:'smooth'})}});
+ secs.forEach(function(s){s.classList.toggle('cur',s===e.target)})}})},{threshold:0,rootMargin:'-18% 0px -66% 0px'});
+secs.forEach(function(s){tocIO.observe(s)});
+
+/* smooth scroll with offset for in-page links */
+$$('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var id=a.getAttribute('href');if(id.length<2)return;var t=$(id);if(!t)return;e.preventDefault();
+ var y=t.getBoundingClientRect().top+scrollY-84;scrollTo({top:y,behavior:reduce?'auto':'smooth'});history.replaceState(null,'',id);/* No mobile navigation panel on this brand-only header. */})});
+
+/* hero: interactive particle network */
+(function(){
+ var h=$('.hero');if(!h||reduce)return;
+ var c=document.createElement('canvas');c.className='pcv';c.setAttribute('aria-hidden','true');h.insertBefore(c,h.firstChild);
+ var x=c.getContext('2d'),W=0,H=0,P=[],dpr=Math.min(window.devicePixelRatio||1,2),mx=-999,my=-999,vis=true,N=matchMedia('(max-width:700px)').matches?20:48;
+ function size(){W=h.clientWidth;H=h.clientHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+ size();addEventListener('resize',size);
+ for(var i=0;i<N;i++)P.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4,r:1.2+Math.random()*1.8});
+ h.addEventListener('mousemove',function(e){var r=h.getBoundingClientRect();mx=e.clientX-r.left;my=e.clientY-r.top});
+ h.addEventListener('mouseleave',function(){mx=my=-999});
+ new IntersectionObserver(function(es){vis=es[0].isIntersecting}).observe(h);
+ (function loop(){requestAnimationFrame(loop);if(!vis||document.hidden)return;
+  x.clearRect(0,0,W,H);
+  for(var i=0;i<N;i++){var p=P[i];p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
+   var dm=Math.hypot(p.x-mx,p.y-my);if(dm<150){p.x+=(mx-p.x)*.012;p.y+=(my-p.y)*.012;x.strokeStyle='rgba(91,75,232,'+(.5*(1-dm/150))+')';x.beginPath();x.moveTo(p.x,p.y);x.lineTo(mx,my);x.stroke()}
+   x.fillStyle='rgba(91,75,232,.55)';x.beginPath();x.arc(p.x,p.y,p.r,0,6.283);x.fill();
+   for(var j=i+1;j<N;j++){var q=P[j],d=Math.hypot(p.x-q.x,p.y-q.y);if(d<130){x.strokeStyle='rgba(91,75,232,'+(.22*(1-d/130))+')';x.beginPath();x.moveTo(p.x,p.y);x.lineTo(q.x,q.y);x.stroke()}}}
+ })();
+})();
+
+/* subtle hero parallax */
+if(!reduce){var orb=$('.orbit');addEventListener('scroll',function(){if(orb&&innerWidth>1000&&scrollY<innerHeight*1.4)orb.style.translate='0 '+(scrollY*.14).toFixed(1)+'px'},{passive:true})}
+
+/* magnetic hero buttons: none on this page; keep touch spotlight only */
+})();
+</script>
+<script>
+/* Menu + dropdown (same behaviour as the other pages) */
+(function(){
+ var $=function(s){return document.querySelector(s)},$$=function(s){return Array.prototype.slice.call(document.querySelectorAll(s))};
+ var tg=$('#menuToggle'),nav=$('#navWrap');if(!tg||!nav)return;
+ tg.onclick=function(){tg.setAttribute('aria-expanded',nav.classList.toggle('open'))};
+ $$('.dd-btn').forEach(function(b){b.onclick=function(){var li=b.parentNode,o=!li.classList.contains('open');$$('.has-dd').forEach(function(x){x.classList.remove('open')});if(o)li.classList.add('open');b.setAttribute('aria-expanded',o)}});
+ document.addEventListener('click',function(e){if(!e.target.closest('.has-dd')){$$('.has-dd').forEach(function(x){x.classList.remove('open')});$$('.dd-btn').forEach(function(b){b.setAttribute('aria-expanded','false')})}});
+})();
+</script>
+</body>
+</html>
