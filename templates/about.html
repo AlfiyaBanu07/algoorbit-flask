@@ -1946,10 +1946,18 @@ body:has(.card:hover,.tl-card:hover,.minis div:hover,.steps5 li:hover) .cglow{op
 .hero::after,.cta::before{display:none}
 /* ===== Clean: no decorative underlines, bars, dashes or arrow dots ===== */
 .head h2::after,.head.drawn h2::after,.lgt .card .cb h3::after,.lgt.wwd .cb h3::after,.hero h1 em::after,.ready .hero h1 em::after,
-.nav-links>li>a:not(.btn)::after,.dd-btn::after,.site-header .nav-links>li>a.active:not(.btn)::after,
 .ob-link::after,.dbtn::after,.link::after,.fbot a::after,.vt-i::after,.bq-track span::after,
 .stats-band .stat::after,.quote::after,.strip .sn::after,.arch .ai h3::after{display:none!important;content:none!important}
 .hero h1 em{background:none;-webkit-text-fill-color:var(--ind);color:var(--ind)}
+/* ===== Navbar hover underline animation (matches home page) ===== */
+@media(min-width:821px){
+.site-header .nav-links>li>a:not(.btn):not(.cta-btn),.site-header .dd-btn{position:relative}
+.site-header .nav-links>li>a:not(.btn):not(.cta-btn)::after,.site-header .dd-btn::after{content:"";display:block!important;position:absolute;left:0;right:0;bottom:1px;height:2px;border-radius:2px;background:var(--vio);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
+.site-header .nav-links>li>a:not(.btn):not(.cta-btn):hover::after,.site-header .nav-links>li>a:not(.btn):not(.cta-btn):focus-visible::after,.site-header .dd-btn:hover::after,.site-header .dd-btn:focus-visible::after,.site-header .has-dd:hover .dd-btn::after,.site-header .has-dd.open .dd-btn::after{transform:scaleX(1)}
+.site-header .nav-links>li>a.active:not(.btn)::after{transform:scaleX(1);background:var(--peri)}
+}
+@media(prefers-reduced-motion:reduce){.site-header .nav-links>li>a::after,.site-header .dd-btn::after{transition:none}}
+
 .ob-link{background:none!important;padding-bottom:0}
 .in-practice{border-top:0!important;padding-top:6px}
 .fstats{border-top:0;border-bottom:0}.fstats div{border-right:0}
