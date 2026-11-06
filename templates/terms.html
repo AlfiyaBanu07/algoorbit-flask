@@ -363,7 +363,7 @@ h1,h2,h3,h4,p,li,strong,small,summary,a{overflow-wrap:break-word}
 .cta-btn svg{width:15px;height:15px;flex:none;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;transition:transform .25s var(--ease,ease)}
 .nav-links>li>a.cta-btn,.links>a.cta-btn{color:#fff;padding:10px 22px;font:700 15px/1 var(--fd,'Poppins','Open Sans',system-ui,sans-serif);letter-spacing:.02em}
 .nav-links>li>a.cta-btn::after,.links>a.cta-btn::after{display:none}
-.nav-links>li.nav-cta{margin-left:6px}.links>a.cta-btn{margin-left:6px}
+.nav-links>li.cta-item{margin-left:6px}.links>a.cta-btn{margin-left:6px}
 .cta-btn:hover,.nav-links>li>a.cta-btn:hover,.links>a.cta-btn:hover{color:#fff;letter-spacing:.02em;transform:translateY(-2px);background-position:100% 0;box-shadow:0 14px 28px -8px rgba(91,75,232,1),0 0 0 4px rgba(143,132,242,.28),inset 0 1px 0 rgba(255,255,255,.45)}
 .cta-btn:hover svg{transform:translateX(4px)}
 .cta-btn:active,.links>a.cta-btn:active{transform:translateY(0) scale(.97)}
@@ -371,9 +371,9 @@ h1,h2,h3,h4,p,li,strong,small,summary,a{overflow-wrap:break-word}
 @keyframes ctaShine{0%,55%{left:-60%}100%{left:130%}}
 .nav-right{display:flex;align-items:center;gap:12px;flex:none}
 @media(max-width:820px){
- .nav-links>li.nav-cta{margin-left:0;border-bottom:0;padding-top:18px}
+ .nav-links>li.cta-item{margin-left:0;border-bottom:0;padding-top:18px}
  .nav-links>li>a.cta-btn,.links>a.cta-btn{display:flex;width:100%;margin:14px 0 0;padding:15px 20px;font-size:17px;text-align:center;border:1px solid rgba(255,255,255,.28)}
- .nav-links>li.nav-cta>a.cta-btn{margin:0}
+ .nav-links>li.cta-item>a.cta-btn{margin:0}
 }
 @media(max-width:560px){
  .nav-right .cta-btn{padding:8px 15px;font-size:13.5px}
@@ -404,7 +404,7 @@ h1,h2,h3,h4,p,li,strong,small,summary,a{overflow-wrap:break-word}
     <li><a href="/our-work">Our Work</a></li>
     <li><a href="/careers">Careers</a></li>
     <li><a href="/contact">Contact</a></li>
-   <li class="nav-cta"><a href="/contact" class="cta-btn"><span>Get Started</span></a></li></ul>
+   <li class="cta-item"><a href="/contact" class="cta-btn"><span>Get Started</span></a></li></ul>
   </nav>
  </div>
 </header>
